@@ -20,4 +20,4 @@ The key documents are:
 
 * The [JSON Schema](ROADMAP-schema-2025-02.json) document, version 2025-02
 
-      (NOTE:  The JSON Schema that corresponds to the current ontology will be finalized in the coming weeks.)
+	NOTE:  The JSON Schema that corresponds to the current ontology will be finalized in the coming weeks.
