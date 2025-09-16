@@ -10,7 +10,7 @@ The key documents are:
 ## Ontology
 
 * The [ontology](ROADMAP.omn) in Manchester OWL syntax (open with Prot&eacute;g&eacute;)
-    * View in [WebProtege](https://webprotege.stanford.edu/#projects/8afb476f-b7ad-407d-b401-996623275257)
+    * View in [WebProtege](https://webprotege.stanford.edu/#projects/8afb476f-b7ad-407d-b401-996623275257) - (free) account required
  
 * The Metrics components of the ontology provides a compendium of AI model performance measures
     * View an [alphabetical list](ROADMAP%20-%20Metrics.txt) of the 191 scalar metrics
@@ -19,4 +19,5 @@ The key documents are:
 ## JSON Schema
 
 * The [JSON Schema](ROADMAP-schema-2025-02.json) document, version 2025-02
-      NOTE:  The JSON Schema will be finalized in the coming weeks.
+
+      (NOTE:  The JSON Schema that corresponds to the current ontology will be finalized in the coming weeks.)
