@@ -1,0 +1,1421 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "ROADMAP-schema-2025-02.json",
+	"description": "ROADMAP (Radiology Ontology for AI Models, Datasets and Projects) index-card schema",
+	"oneOf": [
+		{
+			"type": "object",
+			"properties": {
+				"$schema": {
+					"$ref": "#/$defs/schema"
+				},
+				"Card": {
+					"$ref": "#/$defs/card"
+				},
+				"Model": {
+					"$ref": "#/$defs/model"
+				}
+			},
+			"required": [
+				"$schema",
+				"Model"
+			],
+			"additionalProperties": false
+		},
+		{
+			"type": "object",
+			"properties": {
+				"$schema": {
+					"$ref": "#/$defs/schema"
+				},
+				"Card": {
+					"$ref": "#/$defs/card"
+				},
+				"Dataset": {
+					"$ref": "#/$defs/dataset"
+				}
+			},
+			"required": [
+				"$schema",
+				"Dataset"
+			],
+			"additionalProperties": false
+		}
+	],
+	"$defs": {
+		"schema": {
+			"const": "ROADMAP-schema-2025-02.json"
+		},
+		"authentication": {
+			"description": "Authentication information for ROADMAP user; must include the Authority and Date, plus at least one user identifier (ID, Name, Email).",
+			"type": "object",
+			"properties": {
+				"ID": {
+					"description": "User's ID on authenticating site",
+					"type": "string"
+				},
+				"Name": {
+					"description": "User's name (from authenticating site)",
+					"type": "string"
+				},
+				"Email": {
+					"description": "User's email address (from authenticating site)",
+					"type": "string",
+					"format": "email"
+				},
+				"Authority": {
+					"description": "Service used to authenicate the individual",
+					"type": "string",
+					"examples": [
+						"rsna.org",
+						"login.gov",
+						"google.com",
+						"microsoft.com",
+						"orcid.org"
+					]
+				},
+				"Date": {
+					"type": "string",
+					"format": "date"
+				}
+			},
+			"additionalProperties": false,
+			"minProperties": 3,
+			"required": [
+				"Authority",
+				"Date"
+			]
+		},
+		"card": {
+			"description": "Information about this model or dataset card",
+			"type": "object",
+			"properties": {
+				"ID": {
+					"description": "ROADMAP accession number",
+					"type": "integer",
+					"minimum": 1
+				},
+				"URL": {
+					"description": "This card's assigned URL",
+					"type": "string",
+					"format": "uri"
+				},
+				"Submitted": {
+					"description": "Person who submitted this card",
+					"$ref": "#/$defs/authentication"
+				},
+				"Approved": {
+					"description": "Person (editor) who approved this card",
+					"$ref": "#/$defs/authentication"
+				}
+			},
+			"additionalProperties": false
+		},
+		"content-code": {
+			"title": "Content code(s)",
+			"description": "RSNA 2-letter content code(s), e.g., 'CT'",
+			"$comment": "ROADMAP:00073",
+			"type": "array",
+			"minItems": 1,
+			"uniqueItems": true,
+			"items": {
+				"title": "Content code",
+				"type": "string",
+				"enum": [
+					"AI",
+					"BR",
+					"BQ",
+					"CA",
+					"CH",
+					"CT",
+					"DM",
+					"ED",
+					"ER",
+					"GI",
+					"GU",
+					"HN",
+					"HP",
+					"IN",
+					"IR",
+					"LM",
+					"MI",
+					"MK",
+					"MR",
+					"NM",
+					"NR",
+					"OB",
+					"OI",
+					"OT",
+					"PD",
+					"PH",
+					"PR",
+					"SQ",
+					"RO",
+					"RS",
+					"US",
+					"VA"
+				],
+				"examples": [
+					"AI",
+					"CT",
+					"GI"
+				]
+			}
+		},
+		"dataset": {
+			"description": "Dataset description",
+			"type": "object",
+			"properties": {
+				"Name": {
+					"description": "Dataset name",
+					"type": "string"
+				},
+				"Indexing code": {
+					"$ref": "#/$defs/indexing"
+				},
+				"Author": {
+					"description": "Individual author(s) of the dataset",
+					"type": "array",
+					"minItems": 1,
+					"items": {
+						"$ref": "#/$defs/person"
+					}
+				},
+				"Organization": {
+					"description": "Developing or sponsoring organization(s)",
+					"type": "array",
+					"minItems": 1,
+					"items": {
+						"$ref": "#/$defs/org"
+					}
+				},
+				"Date": {
+					"type": "object",
+					"minProperties": 1,
+					"properties": {
+						"Created": {
+							"description": "Creation date",
+							"$ref": "#/$defs/date"
+						},
+						"Published": {
+							"description": "Publication date",
+							"$ref": "#/$defs/date"
+						},
+						"Updated": {
+							"description": "Date of last update",
+							"$ref": "#/$defs/date"
+						}
+					},
+					"additionalProperties": false
+				},
+				"Repository": {
+					"description": "Dataset repository URL(s)",
+					"type": "array",
+					"items": {
+						"type": "string",
+						"format": "uri"
+					},
+					"uniqueItems": true
+				},
+				"Version": {
+					"description": "Version designation",
+					"type": "string",
+					"examples": [
+						"1.0",
+						"2024A",
+						"2025-01-01"
+					]
+				},
+				"Reference": {
+					"$ref": "#/$defs/ref"
+				},
+				"License": {
+					"$ref": "#/$defs/license"
+				},
+				"Contact": {
+					"$comment": "ROADMAP:00069",
+					"type": "string"
+				},
+				"Funding": {
+					"$comment": "ROADMAP:03385",
+					"type": "string"
+				},
+				"Ethical review": {
+					"$comment": "ROADMAP:03418",
+					"type": "string"
+				},
+				"Comments": {
+					"$comment": "ROADMAP:00070",
+					"type": "string"
+				},
+				"Imaging": {
+					"$ref": "#/$defs/imaging"
+				},
+				"Labeling": {
+					"description": "Is there a label or target associated with each instance? If so, please provide a description.",
+					"type": "string"
+				},
+				"Missing information": {
+					"description": "Describe any missing information from individual instances. This does not include intentionally removed information, but might include, for example, redacted text.",
+					"type": "string"
+				},
+				"Relationships between instances": {
+					"description": "Are relationships between individual instances made explicit (for example, social network links)? If so, please describe how these relationships are made explicit.",
+					"$comment": "ROADMAP:03409",
+					"type": "string"
+				},
+				"Noise": {
+					"description": "Describe any errors, sources of noise, or redundancies in the dataset.",
+					"$comment": "ROADMAP:03411",
+					"type": "string"
+				},
+				"External data": {
+					"description": "Is the dataset self-contained, or does it link to or otherwise rely on external resources (for example, websites, tweets, other datasets)? If it links to or relies on external resources, a) are there guarantees that they will exist, and remain constant, over time; b) are there official archival versions of the complete dataset (that is, including the external resources as they existed at the time the dataset was created); c) are there any restrictions (for example, licenses, fees) associated with any of the external resources that might apply to a dataset consumer? Please provide descriptions of all external resources and any restrictions associated with them, as well as links or other access points, as appropriate.",
+					"$comment": "ROADMAP:03412",
+					"type": "string"
+				},
+				"Confidentiality": {
+					"description": "Describe any confidential data, Protected Health Information, or non-public communication.",
+					"type": "string"
+				},
+				"Subpopulations": {
+					"description": "Describe any subpopulations (e.g., by age, sex, race, geography) and their distributions in the dataset.",
+					"type": "string"
+				},
+				"Re-identification": {
+					"description": "Describe if and how individuals could be identified directly or indirectly from the data.",
+					"$comment": "ROADMAP:03415",
+					"type": "string"
+				},
+				"Sensitive data": {
+					"$comment": "ROADMAP:03416",
+					"type": "string"
+				},
+				"Collection process": {
+					"description": "Dataset collection process",
+					"$comment": "ROADMAP:03417",
+					"type": "string"
+				},
+				"Composition": {
+					"$comment": "ROADMAP:03388",
+					"type": "object",
+					"properties": {
+						"Confidentiality": {
+							"description": "Does the dataset contain data that might be considered confidential (for example, data that is protected by legal privilege or by doctor–patient confidentiality, data that includes the content of individuals’ non-public communications)? If so, please provide a description.",
+							"$comment": "ROADMAP:03413",
+							"type": "string"
+						},
+						"Data type": {
+							"description": "What do the instances that comprise the dataset represent (for example, documents, photos, people, countries)? Are there multiple types of instances (for example, movies, users, and ratings; people and interactions between them; nodes and edges)?",
+							"$comment": "ROADMAP:03389",
+							"type": "array",
+							"enum": [
+								"Report text",
+								"Image",
+								"Medical record data",
+								"Photograph",
+								"Graph"
+							]
+						},
+						"Number of instances": {
+							"type": "integer"
+						},
+						"Representativeness": {
+							"type": "object",
+							"properties": {
+								"Sample type": {
+									"type": "array",
+									"enum": [
+										"Complete population",
+										"Random sample",
+										"Convenience sample",
+										"Non-random sample",
+										"Other"
+									]
+								},
+								"Population": {
+									"$comment": "ROADMAP:03401",
+									"type": "string"
+								},
+								"Verification": {
+									"description": "Verification of representativeness",
+									"$comment": "ROADMAP:03402",
+									"type": "string"
+								}
+							},
+							"additionalProperties": false
+						}
+					}
+				},
+				"Motivation": {
+					"description": "The following questions are primarily intended to encourage dataset creators to clearly articulate their reasons for creating the dataset and to promote transparency about funding interests. The latter may be particularly relevant for datasets created for research purposes.",
+					"$comment": "ROADMAP:03383",
+					"type": "object",
+					"properties": {
+						"Purpose": {
+							"description": "For what purpose was the dataset created? Was there a specific task in mind? Was there a specific gap that needed to be filled?",
+							"$comment": "ROADMAP:03384",
+							"type": "string"
+						},
+						"Team": {
+							"description": "Who created the dataset (for example, which team, research group) and on behalf of which entity (for example, company, institution, organization)?",
+							"$comment": "ROADMAP:03386",
+							"type": "string"
+						},
+						"Funding": {
+							"description": "Specify grantor, grant name, and number.",
+							"$comment": "ROADMAP:03385",
+							"type": "string"
+						},
+						"Comments": {
+							"description": "Dataset motivation comments",
+							"$comment": "ROADMAP:03387",
+							"type": "string"
+						}
+					},
+					"additionalProperties": false
+				},
+				"Partioning scheme": {
+					"description": "Overall approach to partition the dataset, if applicable. For example: 70% training, 20% optimization, 10% testing. The Partitions array provides detail about each partition.",
+					"type": "string"
+				},
+				"Partition": {
+					"description": "Array to describe characteristics",
+					"$comment": "ROADMAP:03410",
+					"type": "object",
+					"properties": {
+						"Training": {
+							"$ref": "#/$defs/subset"
+						},
+						"Optimization": {
+							"$ref": "#/$defs/subset"
+						},
+						"Validation": {
+							"$ref": "#/$defs/subset"
+						},
+						"Testing": {
+							"$ref": "#/$defs/subset"
+						},
+						"Internal testing": {
+							"$ref": "#/$defs/subset"
+						},
+						"External testing": {
+							"$ref": "#/$defs/subset"
+						}
+					},
+					"additionalProperties": {
+						"$ref": "#/$defs/subset"
+					}
+				},
+				"Subsets": {
+					"type": "array",
+					"items": {
+						"$ref": "#/$defs/subset"
+					}
+				}
+			},
+			"required": [
+				"Name"
+			],
+			"additionalProperties": false
+		},
+		"date": {
+			"description": "Date (Year or ISO-format date)",
+			"type": [
+				"string",
+				"number"
+			],
+			"examples": [
+				"2025-01-01",
+				2025
+			],
+			"if": {
+				"type": "string"
+			},
+			"then": {
+				"format": "date"
+			},
+			"else": {
+				"minimum": 1900,
+				"maximum": 2100
+			}
+		},
+		"imaging": {
+			"title": "Imaging modality and procedure(s)",
+			"type": "object",
+			"properties": {
+				"Modality": {
+					"type": "array",
+					"items": {
+						"description": "Imaging modality; requires a value from RadLex (RID10311)",
+						"$comment": "ROADMAP:00120, RadLex:RID10311",
+						"type": "string",
+						"enum": [
+							"3-Dimensional ultrasound (RID10920)",
+							"4-Dimensional CT (RID38755)",
+							"4-Dimensional ultrasound (RID10926)",
+							"A-mode ultrasound (RID10903)",
+							"B-mode ultrasound (RID10904)",
+							"Bremsstrahlung imaging (RID10336)",
+							"C-mode ultrasound (RID10907)",
+							"Color doppler mode (RID10909)",
+							"Combined modalities (RID49580)",
+							"Computed radiography (RID10349)",
+							"Computed tomography (RID10321)",
+							"Conventional tomography (RID10358)",
+							"Diffusion tensor imaging (RID38778)",
+							"Digital radiography (RID10351)",
+							"Doppler mode (RID10908)",
+							"Dual energy xray absorptiometry (RID10363)",
+							"Dual-energy CT (RID38660)",
+							"Dual-energy subtraction radiography (RID10356)",
+							"Duplex ultrasound (RID10922)",
+							"Dynamic contrast-enhanced magnetic resonance imaging (RID49531)",
+							"Elastography (RID10932)",
+							"Extended field-of-view ultrasound (RID10924)",
+							"Fluoroscopy (RID10361)",
+							"Functional magnetic resonance imaging (RID10317)",
+							"Harmonic ultrasound (RID10913)",
+							"High intensity pulse (RID10919)",
+							"High-energy scan (RID12412)",
+							"Low intensity pulse (RID10918)",
+							"Low-energy scan (RID12411)",
+							"MR fluoroscopy (RID11071)",
+							"Magnetic resonance angiography (RID10319)",
+							"Magnetic resonance imaging (RID10312)",
+							"Magnetic resonance spectroscopy (RID10315)",
+							"Mammography (RID10357)",
+							"Molecular imaging (RID12508)",
+							"Nuclear medicine imaging (RID10330)",
+							"Other modality (dicom) (RID49585)",
+							"PET-CT (RID10341)",
+							"PET-MR (RID10342)",
+							"Panographic radiograph (RID10360)",
+							"Phase-cancellation harmonic ultrasound (RID10914)",
+							"Planar nuclear medicine imaging (RID10333)",
+							"Positron emission tomography (RID10337)",
+							"Power doppler mode (RID10910)",
+							"Projection radiography (RID10345)",
+							"Quantitative computed tomography (RID10323)",
+							"Radiofluoroscopy (RID45709)",
+							"SPECT-CT (RID49583)",
+							"Scintigraphy (RID34428)",
+							"Screen-film radiography (RID10353)",
+							"Single photon emission computed tomography (RID10334)",
+							"Single photon imaging (RID10332)",
+							"Spectral doppler mode (RID10911)",
+							"Spectroscopy (RID10377)",
+							"Stereoscopy (RID50131)",
+							"Stereotactic radiography (RID50260)",
+							"Stimulated acoustic emission (RID10916)",
+							"Strain imaging (RID10933)",
+							"Tomography (RID28840)",
+							"Tomosynthesis (RID10359)",
+							"Triplex ultrasound (RID10923)",
+							"US-RF (RID49581)",
+							"Ultrasound (RID10326)",
+							"Volume imaging (RID10930)",
+							"XR-RF (RID49582)"
+						]
+					}
+				},
+				"Procedure": {
+					"description": "Imaging procedures, from LOINC/RSNA Radiology Playbook",
+					"$comment": "Imaging procedure (ROADMAP:00121)",
+					"type": "array",
+					"items": {
+						"type": "object",
+						"minProperties": 1,
+						"maxProperties": 3,
+						"properties": {
+							"LOINC": {
+								"type": "string",
+								"examples": [
+									"36813-4"
+								]
+							},
+							"RadLex": {
+								"type": "string",
+								"minLength": 5,
+								"maxLength": 10,
+								"pattern": "RPID[0-9]+",
+								"examples": [
+									"RPID145"
+								]
+							},
+							"Name": {
+								"type": "string",
+								"examples": [
+									"CT Abdomen and Pelvis W contrast IV"
+								]
+							}
+						},
+						"additionalProperties": false,
+						"examples": [
+							{
+								"Name": "XR Hand - left PA",
+								"LOINC": "36623-7"
+							},
+							{
+								"Name": "CT Abdomen and Pelvis W contrast IV",
+								"LOINC": "36813-4",
+								"RadLex": "RPID145"
+							}
+						]
+					}
+				},
+				"File format": {
+					"description": "Image file format",
+					"type": "array",
+					"items": {
+						"type": "string",
+						"enum": [
+							"DICOM",
+							"JPEG",
+							"NiFTI",
+							"PNG",
+							"Other"
+						]
+					},
+					"unevaluatedItems": true
+				},
+				"Resolution": {
+					"type": "string"
+				},
+				"Pre-processing": {
+					"type": "string"
+				},
+				"Burned-in PHI": {
+					"type": "string",
+					"enum": [
+						"Yes",
+						"No",
+						"Unknown"
+					]
+				}
+			}
+		},
+		"indexing": {
+			"description": "Indexing code(s): 2-letter content codes (e.g., 'NR'), RadLex, and/or SNOMED CT",
+			"type": "object",
+			"properties": {
+				"Content": {
+					"$ref": "#/$defs/content-code"
+				},
+				"RadLex": {
+					"$ref": "#/$defs/radlex"
+				},
+				"SNOMED": {
+					"description": "SNOMED CT code(s)",
+					"type": "array",
+					"uniqueItems": true,
+					"items": {
+						"type": "string"
+					}
+				}
+			},
+			"additionalProperties": false
+		},
+		"license": {
+			"description": "License or rights to access this resource",
+			"$comment": "ROADMAP:00068",
+			"minProperties": 1,
+			"properties": {
+				"Text": {
+					"type": "string",
+					"examples": [
+						"Non-commercial use"
+					]
+				},
+				"URL": {
+					"type": "string",
+					"format": "uri",
+					"examples": [
+						"https://creativecommons.org/licenses/by-nc-nd/4.0/"
+					]
+				}
+			},
+			"additionalProperties": false
+		},
+		"metric": {
+			"description": "Model performance metrics",
+			"type": "array",
+			"uniqueItems": true,
+			"items": {
+				"type": "string",
+				"enum": [
+					"95th percentile Hausdorff distance",
+					"Accuracy",
+					"Alternative free-response operating characteristic analysis",
+					"Area under the precision-recall curve",
+					"Area under the receiver operating characteristic curve",
+					"Average Hausdorff distance",
+					"Average precision",
+					"Average symmetric surface distance",
+					"BLEU score",
+					"Balanced accuracy",
+					"Bias",
+					"Boundary intersection over union",
+					"Box Intersection over union",
+					"Brier score",
+					"Calibration",
+					"Centerline Dice similarity coefficient",
+					"Class error",
+					"Class-wise calibration error",
+					"Coefficient of variance",
+					"Cohen's kappa",
+					"Competition performance metric",
+					"Concordance correlation coefficient",
+					"Concordance statistic",
+					"Confusion matrix",
+					"Dice similarity coefficient",
+					"Discrimination slope",
+					"Enhanced detection rate",
+					"Ensemble mean square error",
+					"Entropy",
+					"Expected calibration error",
+					"Expected cost",
+					"F score",
+					"F(beta) score",
+					"F1 score",
+					"F2 score",
+					"False positive rate",
+					"False positives per image",
+					"Free-response operating characteristic analysis",
+					"Free-response receiver operating characteristic score",
+					"Generalized percent agreement metric",
+					"Global consistency error",
+					"Hausdorff distance",
+					"Interchangeability metric",
+					"Interclass correlation",
+					"Intersection over union",
+					"Intraclass correlation coefficient",
+					"Kendall's tau coefficient",
+					"Kernel calibration error",
+					"Likelihood ratio",
+					"Location precision recall metric",
+					"MAUVE",
+					"Mahalanobis distance",
+					"Mask Intersection over union",
+					"Matthews correlation coefficient",
+					"Mean absolute error",
+					"Mean absolute percentage error",
+					"Mean absolute scaled error",
+					"Mean absolute surface distance",
+					"Mean average precision",
+					"Mean intersection over union",
+					"Mean square error",
+					"Multiclass Brier score",
+					"Mutual information",
+					"Negative discordance rate",
+					"Negative likelihood ratio",
+					"Negative log likelihood",
+					"Negative percent agreement",
+					"Negative predictive value",
+					"Normalized mutual information",
+					"Normalized surface distance",
+					"Observed-to-expected ratio",
+					"Panoptic quality",
+					"Partial area under the ROC curve",
+					"Peak signal-to-noise ratio",
+					"Pearson correlation coefficient",
+					"Percent agreement",
+					"Percent agreement for class (I)",
+					"Positive concordance rate",
+					"Positive likelihood ratio",
+					"Positive percent agreement",
+					"Positive predictive value",
+					"Precision",
+					"Prediction probability",
+					"R-squared",
+					"ROUGE",
+					"Rand index",
+					"Recall",
+					"Receiver operating characteristic analysis",
+					"Repeatability coeeficient",
+					"Reproducibility coefficient",
+					"Root Brier score",
+					"Sensitivity",
+					"Sensitivity at false-positive per image",
+					"Signal-to-noise ratio",
+					"Spearman's rho",
+					"Specificity",
+					"Symmetric mean absolute percentage error",
+					"Time-to-event analysis metric",
+					"Top-N accuracy",
+					"True negative rate",
+					"True positive rate",
+					"Variance",
+					"Variation of Information",
+					"Volumetric similarity",
+					"Weighted Cohen's kappa",
+					"Youden index"
+				],
+				"examples": [
+					"Precision",
+					"Recall"
+				]
+			}
+		},
+		"model": {
+			"description": "Model description",
+			"$comment": "ROADMAP:00002",
+			"type": "object",
+			"properties": {
+				"Name": {
+					"description": "Model name",
+					"type": "string"
+				},
+				"Indexing code": {
+					"$ref": "#/$defs/indexing"
+				},
+				"Author": {
+					"description": "Author(s) (ROADMAP:00064)",
+					"type": "array",
+					"items": {
+						"$ref": "#/$defs/person"
+					}
+				},
+				"Organization": {
+					"description": "Developing or sponsoring Organization(s) (ROADMAP:00072)",
+					"type": "array",
+					"items": {
+						"$ref": "#/$defs/org"
+					}
+				},
+				"Date": {
+					"type": "object",
+					"properties": {
+						"Created": {
+							"description": "Creation date (ROADMAP:03419)",
+							"$ref": "#/$defs/date"
+						},
+						"Published": {
+							"description": "Publication date (ROADMAP:03420)",
+							"$ref": "#/$defs/date"
+						},
+						"Updated": {
+							"description": "Date of last update (ROADMAP:03421)",
+							"$ref": "#/$defs/date"
+						}
+					},
+					"additionalProperties": false
+				},
+				"Repository": {
+					"description": "Model repository URL(s)",
+					"type": "array",
+					"items": {
+						"type": "string",
+						"format": "uri"
+					},
+					"uniqueItems": true
+				},
+				"Version": {
+					"description": "Version designation of this resource",
+					"type": "string"
+				},
+				"Reference": {
+					"$ref": "#/$defs/ref"
+				},
+				"License": {
+					"$ref": "#/$defs/license"
+				},
+				"Contact": {
+					"$comment": "ROADMAP:00069",
+					"type": "string"
+				},
+				"Funding": {
+					"$comment": "ROADMAP:03385",
+					"type": "string"
+				},
+				"Ethical review": {
+					"$comment": "ROADMAP:03418",
+					"type": "string"
+				},
+				"Comments": {
+					"$comment": "ROADMAP:00070",
+					"type": "string"
+				},
+				"Use": {
+					"description": "Model use information",
+					"type": "object",
+					"properties": {
+						"Intended": {
+							"description": "Intended model use(s)",
+							"$ref": "#/$defs/use"
+						},
+						"Out-of-scope": {
+							"description": "Out-of-scope model use(s)",
+							"$ref": "#/$defs/use"
+						},
+						"Excluded": {
+							"description": "Excluded model use(s)",
+							"$ref": "#/$defs/use"
+						}
+					},
+					"additionalProperties": false
+				},
+				"User": {
+					"type": "object",
+					"properties": {
+						"Intended": {
+							"description": "Intended model user",
+							"$ref": "#/$defs/user"
+						},
+						"Out-of-scope": {
+							"description": "Out-of-scope model user",
+							"$ref": "#/$defs/user"
+						},
+						"Excluded": {
+							"description": "Excluded model user",
+							"$ref": "#/$defs/user"
+						}
+					},
+					"additionalProperties": false
+				},
+				"Metric": {
+					"$ref": "#/$defs/metric"
+				},
+				"Caveat": {
+					"$comment": "ROADMAP:03353",
+					"type": "string"
+				},
+				"Decision threshold": {
+					"$comment": "ROADMAP:03351",
+					"type": "string"
+				},
+				"Ethical consideration": {
+					"$comment": "ROADMAP:03352",
+					"type": "string"
+				},
+				"Recommendation": {
+					"$comment": "ROADMAP:03354",
+					"type": "string"
+				},
+				"Availability": {
+					"description": "Model availability",
+					"$comment": "ROADMAP:03373",
+					"type": "string"
+				},
+				"Sustainability": {
+					"description": "Sustainability",
+					"$comment": "ROADMAP:03376",
+					"type": "string"
+				},
+				"Time to train model": {
+					"description": "Sustainability: Time to train model",
+					"$comment": "ROADMAP:03377",
+					"type": "string"
+				},
+				"Time to evaluate single input": {
+					"description": "Sustainability: Time to evaluate single input",
+					"$comment": "ROADMAP:03378",
+					"type": "string"
+				},
+				"Required processor": {
+					"description": "Sustainability: Required processors",
+					"$comment": "ROADMAP:03379",
+					"type": "string"
+				},
+				"Carbon footprint calculation": {
+					"description": "Sustainability: Carbon footprint calculation",
+					"$comment": "ROADMAP:03380",
+					"type": "string"
+				},
+				"Method": {
+					"description": "Array of relevant machine-learning methods or method categories, from Papers With Code",
+					"$comment": "ROADMAP:00118",
+					"type": "array",
+					"uniqueItems": true,
+					"items": {
+						"type": "string",
+						"format": "uri",
+						"examples": [
+							"https://paperswithcode.com/method/autoencoder",
+							"https://paperswithcode.com/method/unet",
+							"https://paperswithcode.com/methods/category/image-feature-extractors"
+						],
+						"anyOf": [
+							{
+								"pattern": "https://paperswithcode.com/method/.+"
+							},
+							{
+								"pattern": "https://paperswithcode.com/methods/category/.+"
+							}
+						]
+					}
+				},
+				"Task": {
+					"description": "Tasks to which the model is applied, from Papers With Code",
+					"$comment": "ROADMAP:00119",
+					"type": "array",
+					"uniqueItems": true,
+					"items": {
+						"type": "string",
+						"pattern": "https://paperswithcode.com/task/.+",
+						"format": "uri",
+						"examples": [
+							"https://paperswithcode.com/task/object-detection",
+							"https://paperswithcode.com/task/semantic-segmentation"
+						]
+					}
+				},
+				"Predicate device": {
+					"description": "Describes the AI model(s) or other medical device(s) considered 'predicate devices' for the purpose of regulatory review. Includes both a Text field and a URL array.",
+					"type": "object",
+					"properties": {
+						"Text": {
+							"type": "string"
+						},
+						"URL": {
+							"description": "An array listing the URLs of predicate devices for regulatory review. For example, may include URL of FDA submissions or approvals.",
+							"type": "array",
+							"items": {
+								"type": "string",
+								"format": "uri"
+							}
+						}
+					},
+					"additionalProperties": false,
+					"minProperties": 1
+				}
+			},
+			"additionalProperties": false
+		},
+		"org": {
+			"title": "Organization description",
+			"description": "Description of organization",
+			"type": "object",
+			"properties": {
+				"Name": {
+					"description": "Name of organization",
+					"type": "string"
+				},
+				"Contact name": {
+					"description": "Name or role of organizational contact",
+					"type": "string"
+				},
+				"Email": {
+					"type": "string",
+					"format": "email"
+				},
+				"Address": {
+					"description": "Organizations's physical (real-world) address",
+					"type": "string"
+				},
+				"URL": {
+					"type": "string",
+					"format": "uri"
+				}
+			},
+			"required": [
+				"Name"
+			],
+			"additionalProperties": false
+		},
+		"person": {
+			"description": "Description of individual Person",
+			"type": "object",
+			"properties": {
+				"Name": {
+					"description": "The person's name",
+					"type": "string"
+				},
+				"Email": {
+					"type": "string",
+					"format": "email"
+				},
+				"Address": {
+					"description": "Person's physical (real-world) address",
+					"type": "string"
+				},
+				"ORCID": {
+					"description": "Unique ORCID (Open Researcher and Contributor ID) identifier",
+					"type": "string",
+					"pattern": "https://orcid.org/.+",
+					"format": "uri",
+					"examples": [
+						"https://orcid.org/0000-0000-0000-0000"
+					]
+				},
+				"URL": {
+					"type": "string",
+					"format": "uri"
+				}
+			},
+			"required": [
+				"Name"
+			],
+			"additionalProperties": false
+		},
+		"radlex": {
+			"description": "RadLex code(s)",
+			"$comment": "https://radlex.org/RID/$",
+			"type": "array",
+			"uniqueItems": true,
+			"items": {
+				"oneOf": [
+					{
+						"type": "string",
+						"pattern": "RID[0-9]+",
+						"examples": [
+							"RID58",
+							"RID1169"
+						]
+					},
+					{
+						"type": "object",
+						"patternProperties": {
+							"RID[0-9]+": {
+								"type": "string"
+							}
+						},
+						"additionalProperties": false,
+						"examples": [
+							{
+								"RID58": "liver"
+							}
+						]
+					}
+				]
+			}
+		},
+		"ref": {
+			"description": "Information about a literature reference",
+			"type": "array",
+			"items": {
+				"type": "object",
+				"properties": {
+					"Authors": {
+						"description": "Author names",
+						"type": "string",
+						"examples": [
+							"Rudie JD, et al."
+						]
+					},
+					"Title": {
+						"description": "Reference title",
+						"type": "string",
+						"examples": [
+							"The RSNA Abdominal Traumatic Injury CT (RATIC) Dataset"
+						]
+					},
+					"Source": {
+						"description": "Name of journal, book, or other source",
+						"type": "string",
+						"examples": [
+							"Radiology: Artificial Intelligence"
+						]
+					},
+					"Year": {
+						"type": "integer"
+					},
+					"Date": {
+						"description": "Year or date of publication",
+						"$ref": "#/$defs/date"
+					},
+					"DOI": {
+						"description": "Digital Object Identifer (DOI)",
+						"$comment": "https://doi.org/$",
+						"type": "string",
+						"pattern": "[0-9]+\\.[0-9]+/.+",
+						"examples": [
+							"10.1148/ryai.240101"
+						]
+					},
+					"URL": {
+						"description": "Pointer to online reference",
+						"type": "string",
+						"format": "uri",
+						"examples": [
+							"https://doi.org/10.1148/ryai.240101"
+						]
+					},
+					"PMID": {
+						"description": "PubMed ID",
+						"$comment": "https://pubmed.ncbi.nlm.nih.gov/$/",
+						"type": "integer",
+						"examples": [
+							39441109
+						]
+					},
+					"PMCID": {
+						"description": "PubMed Central ID",
+						"$comment": "https://pmc.ncbi.nlm.nih.gov/articles/$/",
+						"type": "string",
+						"examples": [
+							"PMC8017407"
+						]
+					},
+					"Notes": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"Title"
+				],
+				"additionalProperties": false
+			}
+		},
+		"subset": {
+			"description": "Patient descriptor: age, sex, race, and/or other criterion.",
+			"$comment": "ROADMAP:03422",
+			"type": "object",
+			"properties": {
+				"Site count": {
+					"description": "Number of sites",
+					"$comment": "Site count (ROADMAP:03358)",
+					"type": "integer"
+				},
+				"Patient count": {
+					"description": "Number of distinct patients",
+					"$comment": "Patient count (ROADMAP:00056)",
+					"type": "integer"
+				},
+				"Exam count": {
+					"description": "Number of exams",
+					"$comment": "Study count (ROADMAP:00057)",
+					"type": "integer"
+				},
+				"Series count": {
+					"description": "Number of imaging series",
+					"$comment": "Series count (ROADMAP:00632)",
+					"type": "integer"
+				},
+				"Image count": {
+					"description": "Number of images",
+					"$comment": "Image count (ROADMAP:00058)",
+					"type": "integer"
+				},
+				"Age range": {
+					"title": "Age range",
+					"description": "Age range, specified as a 2-element array: [Lower bound, Upper bound]",
+					"type": "array",
+					"minItems": 2,
+					"maxItems": 2,
+					"items": {
+						"description": "Lower or upper bound",
+						"type": "array",
+						"minItems": 2,
+						"maxItems": 2,
+						"prefixItems": [
+							{
+								"description": "Value",
+								"type": "integer",
+								"minimum": 0,
+								"maximum": 240
+							}
+						],
+						"items": {
+							"description": "Units",
+							"type": "string",
+							"enum": [
+								"days",
+								"months",
+								"years"
+							]
+						},
+						"examples": [
+							[
+								10,
+								"days"
+							],
+							[
+								3,
+								"months"
+							],
+							[
+								18,
+								"years"
+							]
+						]
+					},
+					"examples": [
+						[
+							[
+								2,
+								"years"
+							],
+							[
+								17,
+								"years"
+							]
+						],
+						[
+							[
+								65,
+								"years"
+							],
+							[
+								100,
+								"years"
+							]
+						]
+					]
+				},
+				"Sex": {
+					"type": "string",
+					"enum": [
+						"Female",
+						"Male",
+						"Unknown",
+						"Not specified"
+					]
+				},
+				"Demographic": {
+					"description": "Race / ethnicity (U.S. reporting categories)",
+					"$comment": "Race / ethnicity (ROADMAP:03441): American Indian or Alaska Native (ROADMAP:03448), Asian (ROADMAP:03442), Black or African American (ROADMAP:03443), Hispanic or Latino (ROADMAP:03444), Middle Eastern or North African (ROADMAP:03445), Native Hawaiian or Pacific Islander (ROADMAP:03446), White (ROADMAP:03447)",
+					"type": "string",
+					"enum": [
+						"American Indian or Alaska Native",
+						"Asian",
+						"Black or African American",
+						"Hispanic or Latino",
+						"Middle Eastern or North African",
+						"Native Hawaiian or Pacific Islander",
+						"White"
+					]
+				},
+				"Criterion": {
+					"description": "Other subset criterion, such as reference-standard value, imaging finding, or other factor",
+					"$comment": "ROADMAP:03477",
+					"type": "string"
+				},
+				"Comments": {
+					"type": "string"
+				},
+				"Subset": {
+					"description": "A Subset may describe all or part of a Dataset, Partition, or Subset",
+					"$comment": "ROADMAP:3472",
+					"type": "array",
+					"items": {
+						"description": "Subset data by age, sex, race, and/or other criteria.",
+						"$ref": "#/$defs/subset"
+					}
+				}
+			},
+			"additionalProperties": false,
+			"examples": [
+				{
+					"Sex": "Female",
+					"Patient count": 501
+				},
+				{
+					"Age range": [
+						[
+							50,
+							"years"
+						],
+						[
+							59,
+							"years"
+						]
+					],
+					"Sex": "Male",
+					"Demographics": "Asian",
+					"Patient count": 42,
+					"Exam  count": 50,
+					"Image count": 572
+				}
+			]
+		},
+		"use": {
+			"description": "Model use(s)",
+			"$comment": "ROADMAP:00015",
+			"oneOf": [
+				{
+					"type": "array",
+					"uniqueItems": true,
+					"items": {
+						"type": "string",
+						"enum": [
+							"Artifact reduction",
+							"Cure",
+							"Decision support",
+							"Detection and diagnosis",
+							"Detection",
+							"Diagnosis",
+							"Exam protocol selection",
+							"Image processing",
+							"Image reconstruction",
+							"Image segmentation",
+							"Image style transfer",
+							"Instance segmentation",
+							"Mitigation",
+							"Noise reduction",
+							"Prevention",
+							"Procedure selection",
+							"Prognosis",
+							"Report data extraction",
+							"Report generation",
+							"Report impression generation",
+							"Report processing",
+							"Report summarization",
+							"Report translation",
+							"Risk assessment",
+							"Segmentation",
+							"Semantic segmentation",
+							"Treatment",
+							"Triage"
+						]
+					}
+				},
+				{
+					"type": "object",
+					"properties": {
+						"Other": {
+							"type": "string"
+						}
+					},
+					"additionalProperties": false
+				}
+			],
+			"examples": [
+				[
+					"Detection",
+					"Diagnosis"
+				],
+				{
+					"Other": "Something else"
+				}
+			]
+		},
+		"user": {
+			"description": "User types",
+			"type": "array",
+			"uniqueItems": true,
+			"items": {
+				"type": "string",
+				"enum": [
+					"Administrator",
+					"Advanced practice provider",
+					"Caregiver",
+					"Diagnostic radiologist",
+					"Family member",
+					"General diagnostic radiologist",
+					"Interventional radiologist",
+					"Layperson",
+					"Non-physician provider",
+					"Nurse practitioner",
+					"Other",
+					"Patient",
+					"Physician assistant",
+					"Physician",
+					"Radiologist",
+					"Radiology nurse",
+					"Radiology technologist",
+					"Referring physician",
+					"Referring provider",
+					"Researcher",
+					"Subspecialist diagnostic radiologist"
+				]
+			},
+			"examples": [
+				[
+					"Radiologist",
+					"Radiology technologist"
+				]
+			]
+		}
+	}
+}

@@ -1,0 +1,613 @@
+95HD = 95th percentile Hausdorff distance
+95th percentile Hausdorff distance
+absolute EDR = absolute enhanced detection rate
+absolute enhanced detection rate
+accuracy
+actual MRN = actual medical record number
+aEDR = absolute enhanced detection rate
+AHD = average Hausdorff distance
+AI-enhanced detection rate = enhanced detection rate
+AP = average precision
+approx intersection over union = approximate intersection over union
+approx IoU = approximate intersection over union
+approximate intersection over union
+approximate IoU = approximate intersection over union
+area under AFROC curve = area under the alternative free-response operating characteristic curve
+area under the AFROC curve = area under the alternative free-response operating characteristic curve
+area under the alternative free-response operating characteristic curve
+area under the precision-recall curve
+area under the predictive receiver operating characteristic curve
+area under the receiver operating characteristic curve
+area under the receiver operating curve at time (t) = time-dependent area under the receiver operating characteristic curve
+area under the ROC curve = area under the receiver operating characteristic curve
+area under TPR-FPR curve = area under the receiver operating characteristic curve
+ARI = automated readability index
+ASSD = average symmetric surface distance
+AU1P = AUC of each class vs. each of the other k-1 classes
+AU1U = AUC of each class vs. each of the other k-1 classes
+AUAFROC = area under the alternative free-response operating characteristic curve
+AUC = area under the receiver operating characteristic curve
+AUC at time (t) = time-dependent area under the receiver operating characteristic curve
+AUC of each class vs. each of the other k-1 classes
+AUC of each class vs. the rest combined
+AUC score = area under the receiver operating characteristic curve
+AUC(t) = time-dependent area under the receiver operating characteristic curve
+AUC-PROC = area under the predictive receiver operating characteristic curve
+AUC-ROC = area under the receiver operating characteristic curve
+AUC_AFROC = area under the alternative free-response operating characteristic curve
+AUC_PR = area under the precision-recall curve
+AUNP = AUC of each class vs. the rest combined
+AUNU = AUC of each class vs. the rest combined
+AUPRC = area under the precision-recall curve
+AUPROC = area under the predictive receiver operating characteristic curve
+AUROC = area under the receiver operating characteristic curve
+AUROC score = area under the receiver operating characteristic curve
+automated readability index
+average Hausdorff distance
+average precision
+average symmetric surface distance
+BA = balanced accuracy
+balanced accuracy
+balanced classification rate = balanced accuracy
+balanced error rate
+balanced recall = macro-recall
+BCR = balanced accuracy
+BER = balanced error rate
+BERT score = BERTScore
+BERT-Score = BERTScore
+BERTScore
+Bilingual Evaluation Understudy = BLEU
+BLEU
+BLEU score = BLEU
+boundary intersection over union
+boundary intersection-over-union = boundary intersection over union
+boundary IoU = boundary intersection over union
+box intersection over union
+box intersection-over-union = box intersection over union
+box IoU = box intersection over union
+Brier score
+Brier skill score
+BS = Brier score
+BSS = Brier skill score
+C index = concordance index
+C statistic = concordance index
+C-index = concordance index
+calibration intercept
+calibration slope
+calibration-in-the-large
+CCC = concordance correlation coefficient
+center distance
+centerline Dice similarity coefficient
+centerline DSC = centerline Dice similarity coefficient
+CH = cumulative hazard
+CheXbert labeler vector similarity = SembScore
+CHF = cumulative hazard
+class error
+class-wise calibration error
+classification error = class error
+clDSC = centerline Dice similarity coefficient
+CNR = contrast-to-noise ratio
+coefficient of determination = R-squared
+coefficient of variation
+Cohen's kappa
+Cohen's κ = Cohen's kappa
+coincidence index = Dice similarity coefficient
+competition performance metric
+concordance correlation coefficient
+concordance index
+concordance rate = percent agreement
+concordance statistic = concordance index
+conditional entropy
+contrast to noise = contrast-to-noise ratio
+contrast to noise ratio = contrast-to-noise ratio
+contrast-to-noise ratio
+counterfactual fairness
+CPM = competition performance metric
+critical success index = intersection over union
+cross entropy = cross-entropy
+cross-entropy
+CSI = intersection over union
+cumulative hazard
+cumulative hazard function = cumulative hazard
+CV = coefficient of variation
+CV2 = second-order coefficient of variation
+CV_2 = second-order coefficient of variation
+CWCE = class-wise calibration error
+Damerau–Levenshtein distance
+delta P = markedness
+delta-P = markedness
+deltaP = markedness
+demographic fairness = group fairness
+demographic parity
+detection rate = diagnostic yield
+diagnostic odds ratio
+diagnostic yield
+Dice = Dice similarity coefficient
+Dice coefficient = Dice similarity coefficient
+Dice index = Dice similarity coefficient
+Dice score = Dice similarity coefficient
+Dice similarity coefficient
+Dice–Sørensen coefficient = Dice similarity coefficient
+Dice–Sørensen score = Dice similarity coefficient
+discrimination slope
+DOR = diagnostic odds ratio
+DSC = Dice similarity coefficient
+DY = diagnostic yield
+earth mover distance = earth mover's distance
+earth mover's distance
+earth-mover distance = earth mover's distance
+earth-mover's distance = earth mover's distance
+EC = expected cost
+ECE = expected calibration error
+ECE-KDE = expected calibration error with kernel density estimate
+edit distance
+EDR = enhanced detection rate
+EDRa = absolute enhanced detection rate
+EDRr = relative enhanced detection rate
+Efron C index = Efron's C-index
+Efron C-index = Efron's C-index
+Efron's C index = Efron's C-index
+Efron's C-index
+EMD = earth mover's distance
+EMSE = ensemble mean square error
+enhanced detection rate
+ensemble mean square error
+entropy
+entropy reduction
+equality of opportunity
+equalized odds
+error table = confusion matrix
+ethnicity = likelihood ratio
+expected calibration error
+expected calibration error - kernel density estimate = expected calibration error with kernel density estimate
+expected calibration error with kernel density estimate
+expected cost
+expected loss = expected cost
+expected prediction error = expected cost
+F beta = F(beta) score
+F(beta) score
+F(β) = F(beta) score
+F(β) score = F(beta) score
+F-beta = F(beta) score
+F-beta score = F(beta) score
+F-K grade level = Flesch-Kincaid grade level
+F-K reading grade level = Flesch-Kincaid grade level
+F-β = F(beta) score
+F1 = F1 score
+F1 score
+F1-RadGraph = RadGraph-F1
+F1-score = F1 score
+F1RadGraph = RadGraph-F1
+F2 = F2 score
+F2 score
+F2-score = F2 score
+F_β = F(beta) score
+fall-out = false positive rate
+fall-out rate = false positive rate
+fallout = false positive rate
+fallout rate = false positive rate
+false discovery rate
+false omission rate
+false positive rate
+false positives per image
+false referral rate
+FDR = false discovery rate
+FineRadScore
+FKGL = Flesch-Kincaid grade level
+Flesch reading ease = Flesch reading ease score
+Flesch reading ease score
+Flesch-Kincaid grade level
+Flesch-Kincaid reading grade level = Flesch-Kincaid grade level
+Flesch‐Kincaid readability index = Flesch reading ease score
+Flesch‐Kincaid readability score = Flesch reading ease score
+Flesch–Kincaid reading level = Flesch-Kincaid grade level
+FM = Fowlkes-Mallows index
+FMI = Fowlkes-Mallows index
+Fog index = Gunning Fog index
+Fog score = Gunning Fog index
+FOR = false omission rate
+FORCAST = FORCAST readability estimate
+FORCAST readability estimate
+FORCAST readability formula = FORCAST readability estimate
+Fowlkes Mallows index = Fowlkes-Mallows index
+Fowlkes-Mallows index
+FPPI = false positives per image
+FPR = false positive rate
+fraction of cases with user adjustment
+free-response receiver operating characteristic score
+FROC = free-response receiver operating characteristic analysis
+FROC analysis = free-response receiver operating characteristic analysis
+FROC score = free-response receiver operating characteristic score
+FRR = false referral rate
+Fβ = F(beta) score
+GCE = global consistency error
+Generative Radiology Report Evaluation and Error Notation = GREEN
+GF = Gunning Fog index
+GFOG = Gunning Fog index
+global consistency error
+global recall = micro-recall
+graphical model performance data = model performance graph
+GREEN
+GREEN metric = GREEN
+GREEN score = GREEN
+group fairness
+Gunning Fog = Gunning Fog index
+Gunning Fog index
+Gunning Fog score = Gunning Fog index
+half total error rate = balanced error rate
+Hamming distance
+Harrell C index = Harrell’s C-index
+Harrell C-index = Harrell’s C-index
+Harrell’s C index = Harrell’s C-index
+Harrell’s C-index
+Hausdorff distance
+Hausdorff metric = Hausdorff distance
+hazard ratio
+HD = Hausdorff distance
+HD95 = 95th percentile Hausdorff distance
+hit rate = true positive rate
+HR = hazard ratio
+HTER = balanced error rate
+iAUC = integrated time-dependent area under the ROC curve
+ICC = intraclass correlation coefficient
+IDI = information difference index
+IEC = individual equivalence index
+IEI = individual equivalence index
+individual equivalence coefficient = individual equivalence index
+individual equivalence index
+individual fairness
+information difference index
+informedness = Youden index
+integrated time-dependent area under the ROC curve
+integrated time-dependent AUC = integrated time-dependent area under the ROC curve
+interchangeability metric = individual equivalence index
+interclass correlation = interclass correlation coefficient
+interclass correlation coefficient
+intersection over reference
+intersection over union
+Intersection over Union score = intersection over union
+intraclass correlation coefficient
+IoR = intersection over reference
+IoU = intersection over union
+IoU coefficient = intersection over union
+IoU score = intersection over union
+Jaccard coefficient = intersection over union
+Jaccard index = intersection over union
+Jaccard similarity coefficient = intersection over union
+Jaccard similarity coefficient score = intersection over union
+Jaro distance
+K-M curve = Kaplan-Meier estimator
+K-M plot = Kaplan-Meier estimator
+Kaplan-Meier curve = Kaplan-Meier estimator
+Kaplan-Meier plot = Kaplan-Meier estimator
+kappa = Cohen's kappa
+KCE = kernel calibration error
+Kendall's tau coefficient
+Kendall’s τ = Kendall's tau coefficient
+Kendall’s τ coefficient = Kendall's tau coefficient
+kernel calibration error
+KL = Kullback-Leibler divergence
+KLD = Kullback-Leibler divergence
+Kullback-Leibler divergence
+LACC = lenient accuracy
+LCS = longest common subsequence
+lenient accuracy
+Levenshtein distance
+likelihood ratio
+localization ROC = localization receiver operating characteristic analysis
+location recall precision = location recall precision error
+location recall precision error
+location recall precision metric = location recall precision error
+location recall precision score = location recall precision error
+location ROC = localization receiver operating characteristic analysis
+log risk score = log-risk score
+log-risk score
+longest common subsequence
+LR = likelihood ratio
+LR+ = positive likelihood ratio
+LR- = negative likelihood ratio
+LROC = localization receiver operating characteristic analysis
+LRP = location recall precision error
+macro average mean probability rate
+macro average metric = macro-averaged classification metric
+macro average probability rate = macro average mean probability rate
+macro averaged recall = macro-recall
+macro F1 = macro-F1
+macro F1 score = macro-F1
+macro precision = macro-precision
+macro recall = macro-recall
+macro-average metric = macro-averaged classification metric
+macro-averaged precision = macro-precision
+macro-averaged recall = macro-recall
+macro-F1
+macro-F1 score = macro-F1
+macro-precision
+macro-recall
+MAE = mean absolute error
+Mahalanobis distance
+maP = macro-precision
+mAP = mean average precision
+MAPE = mean absolute percentage error
+MAPR = macro average mean probability rate
+maR = macro-recall
+markedness
+MASD = mean average surface distance
+MASE = mean absolute scaled error
+mask intersection over union
+mask intersection over union = mask intersection over union
+mask intersection over union > 0
+mask IoU &gt; 0 = mask intersection over union &gt; 0
+mask IoU = mask intersection over union
+matrix model performance data = model performance matrix
+Matthews correlation coefficient
+MAUVE
+maximum calibration error
+maximum symmetric surface distance = Hausdorff distance
+MCC = Matthews correlation coefficient
+McLaughlin SMOG index = SMOG index
+mean absolute error
+mean absolute percentage error
+mean absolute scaled error
+mean absolute surface distance = mean average surface distance
+mean average precision
+mean average surface distance
+mean intersection over union
+mean intersection over union = mean intersection over union
+mean IoU = mean intersection over union
+mean reciprocal rank
+mean square contingency coefficient = Matthews correlation coefficient
+mean square error = mean squared error
+mean squared error
+mean-difference plot = Bland-Altman analysis
+mean-square error = mean squared error
+Measure Aggregated from Unsupervised Evaluation = MAUVE
+METEOR
+metric for evaluation of translation with explicit ordering = METEOR
+metric for evaluation of translation with explicit ordering score = METEOR
+MHD = Mahalanobis distance
+MI = mutual information
+micro average metric = micro-averaged classification metric
+micro average recall = micro-recall
+micro F1 = micro-F1
+micro F1 score = micro-F1
+micro precision = micro-precision
+micro recall = micro-recall
+micro-average metric = micro-averaged classification metric
+micro-average recall = micro-recall
+micro-averaged precision = micro-precision
+micro-F1
+micro-F1 score = micro-F1
+micro-precision
+micro-recall
+miP = micro-precision
+miR = micro-recall
+MK = markedness
+MRN = medical record number
+MRR = mean reciprocal rank
+MSE = mean squared error
+multiclass Brier score
+mutual information
+NB = net benefit
+NCD = normalized compression distance
+NDR = negative discordance rate
+negative concordance rate = negative percent agreement
+negative discordance rate
+negative likelihood ratio
+negative log likelihood
+negative LR = negative likelihood ratio
+negative percent agreement
+negative predictive value
+net benefit
+NID = normalized information distance
+NLL = negative log likelihood
+NLR = negative likelihood ratio
+NMI = normalized mutual information
+normalized coefficient of variation = second-order coefficient of variation
+normalized compression distance
+normalized cost = expected cost
+normalized information distance
+normalized mutual information
+normalized surface distance
+NPA = negative percent agreement
+NPV = negative predictive value
+NSD = normalized surface distance
+O/E ratio = observed-to-expected ratio
+O:E ratio = observed-to-expected ratio
+observed-to-expected ratio
+observed:expected ratio = observed-to-expected ratio
+Obuchowski index
+operative video = surgical video
+P-R curve = precision-recall curve
+P_K = prediction probability
+panoptic quality
+partial area under the ROC curve
+partial AUC = partial area under the ROC curve
+partial AUROC = partial area under the ROC curve
+pAUC = partial area under the ROC curve
+PCR = positive percent agreement
+peak signal-to-noise ratio
+peak SNR = peak signal-to-noise ratio
+Pearson correlation coefficient
+Pearson r coefficient = Pearson correlation coefficient
+percent agreement
+performance data = model performance information
+perplexity
+phi = Matthews correlation coefficient
+phi coefficient = Matthews correlation coefficient
+pixel-level sensitivity = intersection over reference
+PLR = positive likelihood ratio
+PMID = PubMed identifier
+point inside mask/box/approximation
+Pompeiu-Hausdorff distance = Hausdorff distance
+positive concordance rate = positive percent agreement
+positive likelihood ratio
+positive LR = positive likelihood ratio
+positive percent agreement
+positive predictive value
+PPA = positive percent agreement
+PPV = positive predictive value
+PQ = panoptic quality
+PR curve = precision-recall curve
+precision = positive predictive value
+precision recall curve = precision-recall curve
+precision-recall analysis = precision-recall curve
+prediction probability
+procedural video = surgical video
+pseudo MRN = pseudonymized medical record number
+PSNR = peak signal-to-noise ratio
+PubMed ID = PubMed identifier
+r = Pearson correlation coefficient
+R = Pearson correlation coefficient
+R squared = R-squared
+R-squared
+r^2 = R-squared
+RadCliQ
+RadCliQ-v1 = RadCliQ
+RadGraph F1 = RadGraph-F1
+RadGraph-F1
+radiological report text evaluation metric = RaTEScore
+radiological report text evaluation score = RaTEScore
+Radiology Report Clinical Quality = RadCliQ
+Radiology Report Clinical Quality Metric = RadCliQ
+Rand index
+RaTEScore
+RBS = root Brier score
+RC = repeatability coefficient
+RDC = reproducibility coefficient
+RE = Flesch reading ease score
+recall = true positive rate
+Recall-Oriented Understudy for Gisting Evaluation - Longest Common Subsequence = ROUGE-L
+Recall-Oriented Understudy for Gisting Evaluation - N-gram Co-Occurrence Statistics = ROUGE-N
+Recall-Oriented Understudy for Gisting Evaluation - Skip-Bigram Co-Occurrence Statistic = ROUGE-S
+Recall-Oriented Understudy for Gisting Evaluation - Skip‑Bigram plus Unigram = ROUGE-SU
+Recall-Oriented Understudy for Gisting Evaluation - Weighted Longest Common Subsequence = ROUGE-W
+Recall-Oriented Understudy for Gisting Evaluation = ROUGE
+Recall-Oriented Understudy for Gisting Evaluation – Bigram Co-Occurrence Statistics = ROUGE-2
+Recall-Oriented Understudy for Gisting Evaluation – Trigram Co-Occurrence Statistics = ROUGE-3
+Recall-Oriented Understudy for Gisting Evaluation – Unigram Co-Occurrence Statistics = ROUGE-1
+receiver operating characteristic = receiver operating characteristic analysis
+receiver operating characteristic curve = receiver operating characteristic analysis
+rEDR = relative enhanced detection rate
+relative EDR = relative enhanced detection rate
+relative enhanced detection rate
+relative entropy = Kullback-Leibler divergence
+relative standard deviation = coefficient of variation
+relative standard error
+repeatability coefficient
+reproducibility coefficient
+rho = Spearman's rho
+RI = Rand index
+RMSE = root mean squared error
+ROC = receiver operating characteristic analysis
+ROC analysis = receiver operating characteristic analysis
+ROC curve = receiver operating characteristic analysis
+ROC-AUC = area under the receiver operating characteristic curve
+root Brier score
+root mean square error = root mean squared error
+root mean squared error
+ROUGE
+ROUGE-1
+ROUGE-2
+ROUGE-3
+ROUGE-L
+ROUGE-N
+ROUGE-S
+ROUGE-SU
+ROUGE-W
+RSD = coefficient of variation
+RSE = relative standard error
+r² = R-squared
+R² = R-squared
+S-N ratio = signal-to-noise ratio
+S/N ratio = signal-to-noise ratio
+SACC = strict accuracy
+sample-averaged recall = micro-recall
+SDOH = social determinant of health
+Se = true positive rate
+second-order coefficient of variation
+selectivity = true negative rate
+SembScore
+Sens = true positive rate
+sensitivity = true positive rate
+sensitivity at false-positive per image
+signal to noise ratio = signal-to-noise ratio
+signal-to-noise ratio
+simple measure of gobbledygook = SMOG index
+sMAPE = symmetric mean absolute percentage error
+SMOG = SMOG index
+SMOG index
+SMOG score = SMOG index
+SNR = signal-to-noise ratio
+Sp = true negative rate
+Spearman rank correlation coefficient = Spearman's rho
+Spearman rho = Spearman's rho
+Spearman rho coefficient = Spearman's rho
+Spearman's rank correlation coefficient = Spearman's rho
+Spearman's rho
+Spec = true negative rate
+specificity = true negative rate
+SSIM = structural similarity index measure
+statistical fairness = group fairness
+statistical parity = demographic parity
+strict accuracy
+structural similarity index measure
+surprisal
+survival probability
+symmetric mean absolute percentage error
+Sørensen–Dice coefficient = Dice similarity coefficient
+Sørensen–Dice score = Dice similarity coefficient
+Tanimoto coefficient = intersection over union
+tau = Kendall's tau coefficient
+threat score = intersection over union
+time for user adjustment
+time-dependent area under the receiver operating characteristic curve
+time-dependent AUC = time-dependent area under the receiver operating characteristic curve
+time-dependent ROC analysis = time-dependent receiver operating characteristic analysis
+time-specific area under the receiver operating characteristic curve = time-dependent area under the receiver operating characteristic curve
+time-specific AUC = time-dependent area under the receiver operating characteristic curve
+time-to-event analysis metric = time-to-event metric
+TNF = true negative rate
+TNR = true negative rate
+top-10 accuracy
+top-5 accuracy
+top-n accuracy
+TPF = true positive rate
+TPR = true positive rate
+true negative fraction = true negative rate
+true negative rate
+true positive fraction = true positive rate
+true positive rate
+TS = intersection over union
+TTE metric = time-to-event metric
+Tukey mean-difference plot = Bland-Altman analysis
+uncertainty associated with user interaction
+Uno C index = Uno's C-index
+Uno C-index = Uno's C-index
+Uno's C index = Uno's C-index
+Uno's C-index
+unweighted average recall = macro-recall
+V2 = second-order coefficient of variation
+V_2 = second-order coefficient of variation
+variation of information
+VI = variation of information
+VOI = variation of information
+VOI annotation = volume-of-interest annotation
+VOI label = volume-of-interest annotation
+volume of interest annotation = volume-of-interest annotation
+volume of interest label = volume-of-interest annotation
+volume-of-interest label = volume-of-interest annotation
+volumetric similarity
+VS = volumetric similarity
+Wasserstein loss
+WCK = weighted Cohen's kappa
+weighted average of AUROC = Obuchowski index
+weighted bilateral mean contour distance = average symmetric surface distance
+weighted Cohen's kappa
+weighted kappa = weighted Cohen's kappa
+Youden index
+Δp = markedness
+κ = Cohen's kappa
+ρ = Spearman's rho
+τ = Kendall's tau coefficient
+φ = Matthews correlation coefficient
+φ coefficient = Matthews correlation coefficient

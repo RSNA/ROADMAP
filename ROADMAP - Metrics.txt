@@ -1,0 +1,191 @@
+95th percentile Hausdorff distance
+absolute enhanced detection rate
+accuracy
+approximate intersection over union
+area under the alternative free-response operating characteristic curve
+area under the precision-recall curve
+area under the predictive receiver operating characteristic curve
+area under the receiver operating characteristic curve
+AUC of each class vs. each of the other k-1 classes
+AUC of each class vs. the rest combined
+automated readability index
+average Hausdorff distance
+average precision
+average symmetric surface distance
+balanced accuracy
+balanced error rate
+BERTScore
+BLEU
+boundary intersection over union
+box intersection over union
+Brier score
+Brier skill score
+calibration intercept
+calibration slope
+calibration-in-the-large
+center distance
+centerline Dice similarity coefficient
+class error
+class-wise calibration error
+coefficient of variation
+Cohen's kappa
+competition performance metric
+concordance correlation coefficient
+concordance index
+conditional entropy
+contrast-to-noise ratio
+counterfactual fairness
+cross-entropy
+cumulative hazard
+Damerau–Levenshtein distance
+demographic parity
+diagnostic odds ratio
+diagnostic yield
+Dice similarity coefficient
+discrimination slope
+earth mover's distance
+edit distance
+Efron's C-index
+enhanced detection rate
+ensemble mean square error
+entropy
+entropy reduction
+equality of opportunity
+equalized odds
+expected calibration error
+expected calibration error with kernel density estimate
+expected cost
+F(beta) score
+F1 score
+F2 score
+false discovery rate
+false omission rate
+false positive rate
+false positives per image
+false referral rate
+FineRadScore
+Flesch reading ease score
+Flesch-Kincaid grade level
+FORCAST readability estimate
+Fowlkes-Mallows index
+fraction of cases with user adjustment
+free-response receiver operating characteristic score
+global consistency error
+GREEN
+group fairness
+Gunning Fog index
+Hamming distance
+Harrell’s C-index
+Hausdorff distance
+hazard ratio
+individual equivalence index
+individual fairness
+information difference index
+integrated time-dependent area under the ROC curve
+interclass correlation coefficient
+intersection over reference
+intersection over union
+intraclass correlation coefficient
+Jaro distance
+Kendall's tau coefficient
+kernel calibration error
+Kullback-Leibler divergence
+lenient accuracy
+Levenshtein distance
+likelihood ratio
+location recall precision error
+log-risk score
+longest common subsequence
+macro average mean probability rate
+macro-F1
+macro-precision
+macro-recall
+Mahalanobis distance
+markedness
+mask intersection over union
+mask intersection over union > 0
+Matthews correlation coefficient
+MAUVE
+maximum calibration error
+mean absolute error
+mean absolute percentage error
+mean absolute scaled error
+mean average precision
+mean average surface distance
+mean intersection over union
+mean reciprocal rank
+mean squared error
+METEOR
+micro-F1
+micro-precision
+micro-recall
+multiclass Brier score
+mutual information
+negative discordance rate
+negative likelihood ratio
+negative log likelihood
+negative percent agreement
+negative predictive value
+net benefit
+normalized compression distance
+normalized information distance
+normalized mutual information
+normalized surface distance
+observed-to-expected ratio
+Obuchowski index
+panoptic quality
+partial area under the ROC curve
+peak signal-to-noise ratio
+Pearson correlation coefficient
+percent agreement
+perplexity
+point inside mask/box/approximation
+positive likelihood ratio
+positive percent agreement
+positive predictive value
+prediction probability
+R-squared
+RadCliQ
+RadGraph-F1
+Rand index
+RaTEScore
+relative enhanced detection rate
+relative standard error
+repeatability coefficient
+reproducibility coefficient
+root Brier score
+root mean squared error
+ROUGE
+ROUGE-1
+ROUGE-2
+ROUGE-3
+ROUGE-L
+ROUGE-N
+ROUGE-S
+ROUGE-SU
+ROUGE-W
+second-order coefficient of variation
+SembScore
+sensitivity at false-positive per image
+signal-to-noise ratio
+SMOG index
+Spearman's rho
+strict accuracy
+structural similarity index measure
+surprisal
+survival probability
+symmetric mean absolute percentage error
+time for user adjustment
+time-dependent area under the receiver operating characteristic curve
+top-10 accuracy
+top-5 accuracy
+top-n accuracy
+true negative rate
+true positive rate
+uncertainty associated with user interaction
+Uno's C-index
+variation of information
+volumetric similarity
+Wasserstein loss
+weighted Cohen's kappa
+Youden index
