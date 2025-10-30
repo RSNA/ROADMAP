@@ -47,6 +47,7 @@ earth mover's distance
 edit distance
 Efron's C-index
 enhanced detection rate
+enhanced multi-modal concordance
 ensemble mean square error
 entropy
 entropy reduction
@@ -119,6 +120,7 @@ METEOR
 micro-F1
 micro-precision
 micro-recall
+multi-modal concordance
 multiclass Brier score
 mutual information
 negative discordance rate
