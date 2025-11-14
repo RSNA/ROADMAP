@@ -1930,6 +1930,7 @@
         <rdfs:label xml:lang="en">RadLex code</rdfs:label>
         <rdfs:label xml:lang="es">código RadLex</rdfs:label>
         <skos:altLabel xml:lang="en">RadLex indexing code</skos:altLabel>
+        <skos:definition xml:lang="en">A code from the RadLex ontology (e.g., RID58) used to index an AI resource.</skos:definition>
         <roadmap:ROADMAP_03626>https://radlex.org/RID/RID[0-9]+</roadmap:ROADMAP_03626>
     </owl:Class>
     
@@ -1989,6 +1990,7 @@
         <rdfs:label xml:lang="es">procedimiento de imagen</rdfs:label>
         <rdfs:seeAlso xml:lang="en">http://www.radlex.org/RID/RID13060</rdfs:seeAlso>
         <rdfs:seeAlso xml:lang="en">https://loinc.org/LP29684-5</rdfs:seeAlso>
+        <skos:definition xml:lang="en">An imaging procedure, specified using its LOINC/RSNA Radiology Playbook identifier, RadLex Playbook ID (RPID), and/or texxt name. For example, LOINC code 36813-4, RadLex RPID145, procedure name &quot;CT Abdomen and Pelvis W contrast IV&quot;.</skos:definition>
     </owl:Class>
     
 
@@ -4437,6 +4439,7 @@ Criteria (described as text) include:
         <skos:altLabel xml:lang="en">time to event</skos:altLabel>
         <skos:altLabel xml:lang="en">time-to-event analysis</skos:altLabel>
         <skos:altLabel xml:lang="en">time-to-event analysis metric</skos:altLabel>
+        <skos:definition xml:lang="en">The performance of an AI model in terms of time-to-event analysis.</skos:definition>
     </owl:Class>
     
 
@@ -5609,6 +5612,12 @@ Education also influences health and well-being. Education factors include early
 
     <owl:Class rdf:about="https://rsna.org/roadmap/ROADMAP_03580">
         <rdfs:subClassOf rdf:resource="https://rsna.org/roadmap/ROADMAP_03302"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/ROADMAP_03648"/>
+                <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/ROADMAP_04061"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <dc:source rdf:resource="https://doi.org/10.1080/02664763.2016.1174195"/>
         <dc:source rdf:resource="https://doi.org/10.1177/0962280214537390"/>
         <rdfs:label xml:lang="en">coefficient of variation</rdfs:label>
@@ -7112,6 +7121,17 @@ MK = PPV + NPV - 1</skos:definition>
     
 
 
+    <!-- https://rsna.org/roadmap/ROADMAP_03721 -->
+
+    <owl:Class rdf:about="https://rsna.org/roadmap/ROADMAP_03721">
+        <rdfs:subClassOf rdf:resource="https://rsna.org/roadmap/ROADMAP_00074"/>
+        <rdfs:label xml:lang="en">keyword</rdfs:label>
+        <skos:altLabel xml:lang="en">key word</skos:altLabel>
+        <skos:definition xml:lang="en">An unstructured text word or phrase used to index an AI resource.</skos:definition>
+    </owl:Class>
+    
+
+
     <!-- https://rsna.org/roadmap/ROADMAP_04001 -->
 
     <owl:Class rdf:about="https://rsna.org/roadmap/ROADMAP_04001">
@@ -7358,8 +7378,8 @@ ARI = 4.71 (characters / words) + 0.5 (words / sentences) - 21.43</skos:definiti
         </rdfs:subClassOf>
         <dc:source rdf:resource="https://doi.org/10.1186/s12859-015-0564-6"/>
         <rdfs:label xml:lang="en">strict accuracy</rdfs:label>
-        <skos:altLabel>SACC</skos:altLabel>
-        <skos:definition>Strict accuracy is an evaluation metric that measures the proportion of questions or instances answered exactly correctly according to a gold-standard reference. In question answering, it requires that the system’s top response matches the expected answer precisely, without credit for synonyms, partial matches, or alternate valid forms. It is most often applied to binary or factoid-style tasks, where correctness is defined in absolute terms.</skos:definition>
+        <skos:altLabel xml:lang="en">SACC</skos:altLabel>
+        <skos:definition xml:lang="en">Strict accuracy is an evaluation metric that measures the proportion of questions or instances answered exactly correctly according to a reference standard. In question answering, it requires that the system’s top response matches the expected answer precisely, without credit for synonyms, partial matches, or alternate valid forms. It is most often applied to binary or factoid-style tasks, where correctness is defined in absolute terms.</skos:definition>
         <roadmap:ROADMAP_03651 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</roadmap:ROADMAP_03651>
         <roadmap:ROADMAP_03652 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</roadmap:ROADMAP_03652>
     </owl:Class>
@@ -7981,6 +8001,7 @@ ARI = 4.71 (characters / words) + 0.5 (words / sentences) - 21.43</skos:definiti
         <rdfs:subClassOf rdf:resource="https://rsna.org/roadmap/ROADMAP_04043"/>
         <rdfs:label xml:lang="en">prediction performance</rdfs:label>
         <skos:altLabel xml:lang="en">prediction</skos:altLabel>
+        <skos:definition xml:lang="en">How well an AI model performs in making predictions.</skos:definition>
     </owl:Class>
     
 
@@ -7991,6 +8012,7 @@ ARI = 4.71 (characters / words) + 0.5 (words / sentences) - 21.43</skos:definiti
         <rdfs:subClassOf rdf:resource="https://rsna.org/roadmap/ROADMAP_04043"/>
         <rdfs:label xml:lang="en">calibration performance</rdfs:label>
         <skos:altLabel xml:lang="en">calibration</skos:altLabel>
+        <skos:definition xml:lang="en">The assessment of an AI model&apos;s calibration.</skos:definition>
     </owl:Class>
     
 
@@ -8001,6 +8023,7 @@ ARI = 4.71 (characters / words) + 0.5 (words / sentences) - 21.43</skos:definiti
         <rdfs:subClassOf rdf:resource="https://rsna.org/roadmap/ROADMAP_04043"/>
         <rdfs:label xml:lang="en">signal analysis performance</rdfs:label>
         <skos:altLabel xml:lang="en">signal analysis</skos:altLabel>
+        <skos:definition xml:lang="en">The performance of an AI model in terms of signal analysis.</skos:definition>
     </owl:Class>
     
 
@@ -8022,6 +8045,7 @@ ARI = 4.71 (characters / words) + 0.5 (words / sentences) - 21.43</skos:definiti
         <rdfs:subClassOf rdf:resource="https://rsna.org/roadmap/ROADMAP_04043"/>
         <rdfs:label xml:lang="es">utilidad</rdfs:label>
         <rdfs:label xml:lang="en">utility</rdfs:label>
+        <skos:definition xml:lang="en">The performance of an AI model in terms of utility, such as economic benefit or QALYs.</skos:definition>
     </owl:Class>
     
 
@@ -8033,6 +8057,7 @@ ARI = 4.71 (characters / words) + 0.5 (words / sentences) - 21.43</skos:definiti
         <rdfs:label xml:lang="es">respuesta del usuario</rdfs:label>
         <rdfs:label xml:lang="en">user response performance</rdfs:label>
         <skos:altLabel xml:lang="en">user response</skos:altLabel>
+        <skos:definition xml:lang="en">The performance of an AI model in terms of user response.</skos:definition>
     </owl:Class>
     
 
@@ -8042,7 +8067,9 @@ ARI = 4.71 (characters / words) + 0.5 (words / sentences) - 21.43</skos:definiti
     <owl:Class rdf:about="https://rsna.org/roadmap/ROADMAP_04067">
         <rdfs:subClassOf rdf:resource="https://rsna.org/roadmap/ROADMAP_04043"/>
         <rdfs:label xml:lang="es">contrato de usuario</rdfs:label>
-        <rdfs:label xml:lang="en">user agreement</rdfs:label>
+        <rdfs:label xml:lang="en">user agreement performance</rdfs:label>
+        <skos:altLabel xml:lang="en">user agreement</skos:altLabel>
+        <skos:definition xml:lang="en">The performance of an AI model in terms of user agreement.</skos:definition>
     </owl:Class>
     
 
