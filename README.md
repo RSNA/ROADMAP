@@ -1,6 +1,6 @@
 # ROADMAP
 
-__Radiology Ontology for AI Datasets, Models and Projects__
+__ROADMAP Ontology for AI Datasets, Models and Projects__
 
 The ROADMAP Ontology for Artificial Intelligence Models, Datasets, and Projects (ROADMAP) provides a formal description of the metadata to index the growing number of artificial intelligence (AI) models and datasets, especially in diagnostic radiology. 
 
