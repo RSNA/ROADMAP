@@ -1,6 +1,7 @@
 95th percentile Hausdorff distance
 absolute enhanced detection rate
 accuracy
+adjusted Rand index
 approximate intersection over union
 area under the alternative free-response operating characteristic curve
 area under the precision-recall curve
@@ -14,6 +15,7 @@ average precision
 average symmetric surface distance
 balanced accuracy
 balanced error rate
+BARTScore
 BERTScore
 BLEU
 boundary intersection over union
@@ -35,14 +37,20 @@ concordance index
 conditional entropy
 contrast-to-noise ratio
 counterfactual fairness
+CRIMSON
 cross-entropy
+cumulative gain
 cumulative hazard
 Damerau–Levenshtein distance
+Davies-Bouldin index
 demographic parity
+density-based clustering validation
 diagnostic odds ratio
 diagnostic yield
 Dice similarity coefficient
+discounted cumulative gain
 discrimination slope
+Dunn index
 earth mover's distance
 edit distance
 Efron's C-index
@@ -60,6 +68,7 @@ F(beta) score
 F1 score
 F2 score
 false discovery rate
+false negative rate
 false omission rate
 false positive rate
 false positives per image
@@ -71,6 +80,8 @@ FORCAST readability estimate
 Fowlkes-Mallows index
 fraction of cases with user adjustment
 free-response receiver operating characteristic score
+Fréchet inception distance
+gain-to-pain ratio
 global consistency error
 GREEN
 group fairness
@@ -79,6 +90,8 @@ Hamming distance
 Harrell’s C-index
 Hausdorff distance
 hazard ratio
+Hopkins statistic
+inception score
 individual equivalence index
 individual fairness
 information difference index
@@ -113,6 +126,7 @@ mean absolute percentage error
 mean absolute scaled error
 mean average precision
 mean average surface distance
+mean calibration
 mean intersection over union
 mean reciprocal rank
 mean squared error
@@ -123,6 +137,7 @@ micro-recall
 multi-modal concordance
 multiclass Brier score
 mutual information
+NDGC@k
 negative discordance rate
 negative likelihood ratio
 negative log likelihood
@@ -130,16 +145,21 @@ negative percent agreement
 negative predictive value
 net benefit
 normalized compression distance
+normalized discounted cumulative gain
 normalized information distance
 normalized mutual information
 normalized surface distance
+number needed to benefit
+number of positive cases needed to benefit
 observed-to-expected ratio
 Obuchowski index
+P4 metric
 panoptic quality
-partial area under the ROC curve
+partial area under the receiver operating characteristic curve
 peak signal-to-noise ratio
 Pearson correlation coefficient
 percent agreement
+perceptual path length
 perplexity
 point inside mask/box/approximation
 positive likelihood ratio
@@ -151,6 +171,7 @@ RadCliQ
 RadGraph-F1
 Rand index
 RaTEScore
+reading difficulty level
 relative enhanced detection rate
 relative standard error
 repeatability coefficient
@@ -170,6 +191,7 @@ second-order coefficient of variation
 SembScore
 sensitivity at false-positive per image
 signal-to-noise ratio
+silhouette coefficient
 SMOG index
 Spearman's rho
 strict accuracy
@@ -186,6 +208,7 @@ true negative rate
 true positive rate
 uncertainty associated with user interaction
 Uno's C-index
+variance ratio criterion
 variation of information
 volumetric similarity
 Wasserstein loss
