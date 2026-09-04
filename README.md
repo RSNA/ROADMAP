@@ -11,9 +11,10 @@ The version here is the "production" version of the ontology. The version under 
 
 ## Ontology
 
-* The [ontology](ROADMAP.omn) in Manchester OWL syntax (open with Prot&eacute;g&eacute;)
-    * View in [WebProtege](https://webprotege.stanford.edu/#projects/8afb476f-b7ad-407d-b401-996623275257) - (WARNING: May not be current!)
+* The [ontology](ROADMAP.ttl) in Turtle (Terse RDF Triple Language),
+  a human-readable text file format used to write and serialize data
+  in the Resource Description Framework (RDF) and the Web Ontology Language (OWL).
+  Open with Prot&eacute;g&eacute;.
  
 * The Metrics components of the ontology provides a compendium of AI model performance measures
-    * View an [alphabetical list](ROADMAP%20-%20Metrics.txt) of the 191 scalar metrics
-    * View a list of metric [preferred and alternate names](ROADMAP%20metrics%20-%20label%20and%20altLabel.txt)
+    * View an [alphabetical list](ROADMAP%20-%20Metrics.txt) of 216 scalar metrics.
