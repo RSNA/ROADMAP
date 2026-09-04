@@ -11,9 +11,7 @@ The version here is the "production" version of the ontology. The version under 
 
 ## Ontology
 
-* The [ontology](ROADMAP.ttl) in Turtle (Terse RDF Triple Language),
-  a human-readable text file format used to write and serialize data
-  in the Resource Description Framework (RDF) and the Web Ontology Language (OWL).
+* The [ontology](ROADMAP.omn) in Manchester OWL syntax.
   Open with Prot&eacute;g&eacute;.
  
 * The Metrics components of the ontology provides a compendium of AI model performance measures
