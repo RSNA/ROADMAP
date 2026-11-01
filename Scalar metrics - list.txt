@@ -214,3 +214,7 @@ volumetric similarity
 Wasserstein loss
 weighted Cohen's kappa
 Youden index
+sensitivity
+specificity
+precision
+recall
