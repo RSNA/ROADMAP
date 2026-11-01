@@ -2,7 +2,7 @@
 
 __Radiology Ontology of AI Datasets, Models and Projects__
 
-The Radiology Ontology of AI Models, Datasets, and Projects (ROADMAP) 
+The Radiology Ontology of AI Datasets, Models and Projects (ROADMAP) 
 provides a standardized language for the metadata that describe artificial intelligence
 resources.  
 
@@ -20,23 +20,16 @@ ROADMAP highlights features specific to medical imaging and references concepts 
 ## Ontology
 
 * The [ontology](ROADMAP.ttl) in Turtle (OWL) syntax.
-  Open with Prot&eacute;g&eacute;.
  
 * The Metrics components of the ontology provides a compendium of AI model performance measures
-    * View an [alphabetical list](ROADMAP%20-%20Metrics.txt) of 216 scalar metrics.
+    * View an alphabetical [list](Scalar%20metrics.txt) of 228 scalar metrics
+      plus four common synonyms (sensitivity, specificity, precision, recall).
 
-ROADMAP builds on "model cards" and "datasheets for datasets" to provide a structured
-taxonomy. Concepts include:
-* preferred name
-* synonyms and abbreviations
-* Spanish and Chinese translations
-* definition
-* authoritative reference(s)
 
 ## What's New
 
 Release **2026-11** is a substantial revision of the 2026-05 release
-(`old versions/ROADMAP-2026-05.omn`). The ontology roughly doubled in size, gained a
+(`prior versions/ROADMAP-2026-05.omn`). The ontology roughly doubled in size, gained a
 governance layer linking metadata to reporting guidelines and ethical principles, and
 moved from a largely taxonomic representation to one with explicit logical axioms.
 
@@ -49,7 +42,6 @@ moved from a largely taxonomic representation to one with explicit logical axiom
 | Datatype properties | 0 | 19 |
 | Named individuals | 4 | 623 |
 | **Total entities** | **575** | **1,372** |
-|---|---:|---:|
 | Definitions (`skos:definition`) | 571 | 1,349 |
 | External mappings (`skos:exactMatch`) | 0 | 156 |
 | Logical restrictions | 240 | 1,145 |
@@ -60,8 +52,8 @@ moved from a largely taxonomic representation to one with explicit logical axiom
   syntax (`.omn`).
 * Entity IRIs dropped the redundant `ROADMAP_` infix:
   `https://rsna.org/roadmap/ROADMAP_00011` is now
-  `https://rsna.org/roadmap/00011`. **This is a breaking change for anything that
-  referenced the old IRIs.**
+  `https://rsna.org/roadmap/00011`. This is a breaking change for anything that
+  referenced the old IRIs.
 * The ontology IRI is now `https://rsna.org/roadmap/` rather than a WebProtégé URN.
 * Ontology-level metadata uses Dublin Core Terms (`dcterms:title`, `dcterms:creator`,
   `dcterms:license`, `dcterms:publisher`, `dcterms:source`, `dcterms:modified`) and
@@ -73,9 +65,17 @@ The 2026-05 release placed 24 classes directly beneath the root, mixing resource
 (*dataset*, *model*, *project*) with their attributes (*count*, *descriptor*,
 *image characteristic*) and with evaluation concepts (*performance criterion*).
 
-The release reorganizes these under **eight upper-level classes**: *AI resource*,
-*agent*, *data entity*, *evaluation entity*, *governance entity*, *information entity*,
-*process*, and *unit*. The eight are asserted pairwise disjoint, so a reasoner now
+The release reorganizes these under **eight upper-level classes**: 
+* *AI resource* 
+  + with subclasses *model*, *dataset*, and *project*
+* *agent*
+* *data entity*
+* *evaluation entity*
+* *governance entity*
+* *information entity*
+* *process*
+* *unit* 
+The eight are asserted pairwise disjoint, so a reasoner now
 detects misplaced entities instead of silently accepting them.
 
 ### Reporting guidelines and ethical principles (new)
@@ -158,8 +158,9 @@ confidence level expressed as datatype properties.
 ### Alignment with external vocabularies (new)
 
 The release adds **156 `skos:exactMatch` mappings**, where the 2026-05 release had
-none: OBO ontologies such as OBI, STATO and IAO (44), SNOMED CT (29), RadLex (29),
-MeSH (14), the Units Ontology (3) and LOINC (2).
+none: OBO ontologies such as OBI, STATO and IAO (44), SNOMED CT (36), RadLex (29),
+the Formal Metrics Ontology (23), MeSH (14), the FAIR Data Collective metadata
+vocabulary (3), the Units Ontology (3), QUDT (2) and LOINC (2).
 
 ### Documentation
 
