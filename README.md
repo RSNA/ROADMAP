@@ -75,6 +75,7 @@ The release reorganizes these under **eight upper-level classes**:
 * *information entity*
 * *process*
 * *unit* 
+
 The eight are asserted pairwise disjoint, so a reasoner now
 detects misplaced entities instead of silently accepting them.
 
@@ -87,7 +88,7 @@ An entire governance layer was added under *governance entity*:
   PROBAST+AI (34), REFINE (44), SPIRIT-AI (51), STARD-AI (48), TRAM-AI (14) and
   TRIPOD+AI (52).
 * **4 ethical frameworks** comprising **21 principles**: the OECD AI Principles, the
-  WHO guidance, the FAIR Guiding Principles and FUTURE-AI. FAIR and FUTURE-AI are
+  WHO guidance, the FAIR Guiding Principles, and FUTURE-AI. FAIR and FUTURE-AI are
   modeled as *specific ethical principles* and are the targets of the `supports`
   relation; the OECD and WHO principles are modeled as *general ethical principles*.
 
