@@ -8,6 +8,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:skos="http://www.w3.org/2004/02/skos/core#"
      xmlns:dcterms="http://purl.org/dc/terms/"
+     xmlns:roadmap="https://rsna.org/roadmap/"
      xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
     <owl:Ontology rdf:about="https://rsna.org/roadmap/">
         <dcterms:creator rdf:resource="https://orcid.org/0000-0002-6654-7434"/>
@@ -36,12 +37,6 @@
     <!-- http://purl.org/dc/terms/creator -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
-    
-
-
-    <!-- http://purl.org/dc/terms/isReplacedBy -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/isReplacedBy"/>
     
 
 
@@ -114,12 +109,6 @@
     <!-- http://www.w3.org/2000/01/rdf-schema#seeAlso -->
 
     <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
-    
-
-
-    <!-- http://www.w3.org/2002/07/owl#deprecated -->
-
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#deprecated"/>
     
 
 
@@ -272,15 +261,143 @@
     
 
 
+    <!-- https://rsna.org/roadmap/evaluatesPerformanceOn -->
+
+    <owl:ObjectProperty rdf:about="https://rsna.org/roadmap/evaluatesPerformanceOn">
+        <rdfs:domain rdf:resource="https://rsna.org/roadmap/03808"/>
+        <rdfs:range rdf:resource="https://rsna.org/roadmap/03832"/>
+        <rdfs:comment xml:lang="en">was :03833</rdfs:comment>
+        <rdfs:label xml:lang="en">evaluates performance on</rdfs:label>
+        <skos:definition xml:lang="en">References the evaluation dataset used to assess a model&apos;s performance.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://rsna.org/roadmap/guidelineItemSupportsPrinciple -->
+
+    <owl:ObjectProperty rdf:about="https://rsna.org/roadmap/guidelineItemSupportsPrinciple">
+        <rdfs:subPropertyOf rdf:resource="https://rsna.org/roadmap/supportsPrinciple"/>
+        <rdfs:domain rdf:resource="https://rsna.org/roadmap/00177"/>
+        <rdfs:range rdf:resource="https://rsna.org/roadmap/03805"/>
+        <rdfs:comment xml:lang="en">Not currently used.</rdfs:comment>
+        <rdfs:comment xml:lang="en">was :03920</rdfs:comment>
+        <rdfs:label xml:lang="en">guideline item supports principle</rdfs:label>
+        <skos:definition xml:lang="en">A sub-property of &quot;supports&quot; that links a guideline item to an ethical principle: &quot;A manuscript satisfying this item advances this principle.&quot;</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://rsna.org/roadmap/hasAgeUnit -->
+
+    <owl:ObjectProperty rdf:about="https://rsna.org/roadmap/hasAgeUnit">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://rsna.org/roadmap/03423"/>
+        <rdfs:range rdf:resource="https://rsna.org/roadmap/03467"/>
+        <rdfs:comment xml:lang="en">was :03848</rdfs:comment>
+        <rdfs:label xml:lang="en">has age unit</rdfs:label>
+        <skos:definition xml:lang="en">Specifies the units for a stated age.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://rsna.org/roadmap/hasAxis -->
+
+    <owl:ObjectProperty rdf:about="https://rsna.org/roadmap/hasAxis">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="https://rsna.org/roadmap/03641"/>
+        <rdfs:range rdf:resource="https://rsna.org/roadmap/03302"/>
+        <rdfs:comment xml:lang="en">was :00159</rdfs:comment>
+        <rdfs:label xml:lang="en">has axis</rdfs:label>
+        <skos:definition xml:lang="en">Specifies an axis for graphical metrics.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://rsna.org/roadmap/hasConfidenceInterval -->
+
+    <owl:ObjectProperty rdf:about="https://rsna.org/roadmap/hasConfidenceInterval">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://rsna.org/roadmap/03808"/>
+        <rdfs:range rdf:resource="https://rsna.org/roadmap/00672"/>
+        <rdfs:comment xml:lang="en">was :03849</rdfs:comment>
+        <rdfs:label xml:lang="en">has confidence interval</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://rsna.org/roadmap/hasCount -->
+
+    <owl:ObjectProperty rdf:about="https://rsna.org/roadmap/hasCount">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:range rdf:resource="https://rsna.org/roadmap/00055"/>
+        <rdfs:comment xml:lang="en">was :00130</rdfs:comment>
+        <rdfs:label xml:lang="en">has count</rdfs:label>
+        <skos:altLabel xml:lang="en">hasCount</skos:altLabel>
+        <skos:definition xml:lang="en">Specifies the number of patients, images, etc. for a subset or partition.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://rsna.org/roadmap/hasData -->
+
+    <owl:ObjectProperty rdf:about="https://rsna.org/roadmap/hasData">
+        <rdfs:subPropertyOf rdf:resource="https://rsna.org/roadmap/hasPart"/>
+        <rdfs:comment xml:lang="en">was :03862</rdfs:comment>
+        <rdfs:label xml:lang="en">has data</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://rsna.org/roadmap/hasDataset -->
+
+    <owl:ObjectProperty rdf:about="https://rsna.org/roadmap/hasDataset">
+        <rdfs:subPropertyOf rdf:resource="https://rsna.org/roadmap/hasPart"/>
+        <owl:inverseOf rdf:resource="https://rsna.org/roadmap/isDatasetOf"/>
+        <rdfs:domain rdf:resource="https://rsna.org/roadmap/00010"/>
+        <rdfs:range rdf:resource="https://rsna.org/roadmap/00003"/>
+        <rdfs:comment xml:lang="en">was :00115</rdfs:comment>
+        <rdfs:label xml:lang="en">has dataset</rdfs:label>
+        <skos:definition xml:lang="en">The property that links a Project to its related Dataset(s).</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://rsna.org/roadmap/hasDatasetProperty -->
+
+    <owl:ObjectProperty rdf:about="https://rsna.org/roadmap/hasDatasetProperty">
+        <rdfs:subPropertyOf rdf:resource="https://rsna.org/roadmap/hasResourceMetadata"/>
+        <rdfs:domain rdf:resource="https://rsna.org/roadmap/00003"/>
+        <rdfs:range rdf:resource="https://rsna.org/roadmap/03381"/>
+        <rdfs:comment xml:lang="en">was :03382</rdfs:comment>
+        <rdfs:label xml:lang="en">has dataset property</rdfs:label>
+        <skos:definition xml:lang="en">Links a dataset to its properties.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://rsna.org/roadmap/hasEthicalPrinciple -->
 
     <owl:ObjectProperty rdf:about="https://rsna.org/roadmap/hasEthicalPrinciple">
-        <owl:equivalentProperty rdf:resource="https://rsna.org/roadmap/03841"/>
-        <rdfs:subPropertyOf rdf:resource="https://rsna.org/roadmap/03840"/>
+        <rdfs:subPropertyOf rdf:resource="https://rsna.org/roadmap/hasItem"/>
         <rdfs:domain rdf:resource="https://rsna.org/roadmap/03809"/>
         <rdfs:range rdf:resource="https://rsna.org/roadmap/00248"/>
+        <rdfs:comment xml:lang="en">was :03841</rdfs:comment>
         <rdfs:label xml:lang="en">has ethical principle</rdfs:label>
         <skos:definition xml:lang="en">Links an ethical framework (e.g., FUTURE-AI) to its principles.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://rsna.org/roadmap/hasGeneralMetadata -->
+
+    <owl:ObjectProperty rdf:about="https://rsna.org/roadmap/hasGeneralMetadata">
+        <rdfs:subPropertyOf rdf:resource="https://rsna.org/roadmap/hasResourceMetadata"/>
+        <rdfs:domain rdf:resource="https://rsna.org/roadmap/00657"/>
+        <rdfs:range rdf:resource="https://rsna.org/roadmap/00004"/>
+        <rdfs:comment xml:lang="en">was :00116</rdfs:comment>
+        <rdfs:label xml:lang="en">has general metadata</rdfs:label>
+        <skos:altLabel xml:lang="en">has descriptor</skos:altLabel>
+        <skos:definition xml:lang="en">Links a model, dataset, or project to its general metadata.</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -288,12 +405,378 @@
     <!-- https://rsna.org/roadmap/hasGuidelineItem -->
 
     <owl:ObjectProperty rdf:about="https://rsna.org/roadmap/hasGuidelineItem">
-        <owl:equivalentProperty rdf:resource="https://rsna.org/roadmap/03776"/>
-        <rdfs:subPropertyOf rdf:resource="https://rsna.org/roadmap/03840"/>
+        <rdfs:subPropertyOf rdf:resource="https://rsna.org/roadmap/hasItem"/>
         <rdfs:domain rdf:resource="https://rsna.org/roadmap/00174"/>
         <rdfs:range rdf:resource="https://rsna.org/roadmap/00177"/>
+        <rdfs:comment xml:lang="en">was :03776</rdfs:comment>
         <rdfs:label xml:lang="en">has guideline item</rdfs:label>
         <skos:definition xml:lang="en">Links a guideline (e.g., CLAIM) to its items.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://rsna.org/roadmap/hasIndex -->
+
+    <owl:ObjectProperty rdf:about="https://rsna.org/roadmap/hasIndex">
+        <rdfs:domain rdf:resource="https://rsna.org/roadmap/00657"/>
+        <rdfs:range rdf:resource="https://rsna.org/roadmap/00074"/>
+        <rdfs:comment xml:lang="en">was :03831</rdfs:comment>
+        <rdfs:label xml:lang="en">has index</rdfs:label>
+        <skos:definition xml:lang="en">Links an AI resource to indexing code(s).</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://rsna.org/roadmap/hasItem -->
+
+    <owl:ObjectProperty rdf:about="https://rsna.org/roadmap/hasItem">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="https://rsna.org/roadmap/isItemOf"/>
+        <rdfs:comment xml:lang="en">was :03840</rdfs:comment>
+        <rdfs:label xml:lang="en">has item</rdfs:label>
+        <skos:definition xml:lang="en">Links a guideline (e.g., CLAIM) to its items or an ethical framework (e.g., FAIR) to its principles.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://rsna.org/roadmap/hasMetric -->
+
+    <owl:ObjectProperty rdf:about="https://rsna.org/roadmap/hasMetric">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://rsna.org/roadmap/03808"/>
+        <rdfs:range rdf:resource="https://rsna.org/roadmap/03642"/>
+        <oboInOwl:hasRelatedSynonym xml:lang="en">has performance</oboInOwl:hasRelatedSynonym>
+        <rdfs:comment xml:lang="en">This property links a model to one or more model performance metrics.</rdfs:comment>
+        <rdfs:comment xml:lang="en">was :03709</rdfs:comment>
+        <rdfs:label xml:lang="en">has metric</rdfs:label>
+        <skos:definition xml:lang="en">Defines a relationship between a model and the metrics that describe its performance.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://rsna.org/roadmap/hasModel -->
+
+    <owl:ObjectProperty rdf:about="https://rsna.org/roadmap/hasModel">
+        <rdfs:subPropertyOf rdf:resource="https://rsna.org/roadmap/hasPart"/>
+        <owl:inverseOf rdf:resource="https://rsna.org/roadmap/isModelOf"/>
+        <rdfs:domain rdf:resource="https://rsna.org/roadmap/00010"/>
+        <rdfs:range rdf:resource="https://rsna.org/roadmap/00002"/>
+        <rdfs:comment xml:lang="en">was :00114</rdfs:comment>
+        <rdfs:label xml:lang="en">has model</rdfs:label>
+        <skos:definition xml:lang="en">The property that links a Project to its related Model(s).</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://rsna.org/roadmap/hasModelProperty -->
+
+    <owl:ObjectProperty rdf:about="https://rsna.org/roadmap/hasModelProperty">
+        <rdfs:subPropertyOf rdf:resource="https://rsna.org/roadmap/hasResourceMetadata"/>
+        <rdfs:domain rdf:resource="https://rsna.org/roadmap/00002"/>
+        <rdfs:range rdf:resource="https://rsna.org/roadmap/03355"/>
+        <rdfs:comment xml:lang="en">was :03350</rdfs:comment>
+        <rdfs:label xml:lang="en">has model property</rdfs:label>
+        <skos:definition xml:lang="en">Links a model to its properties.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://rsna.org/roadmap/hasOutcomeCount -->
+
+    <owl:ObjectProperty rdf:about="https://rsna.org/roadmap/hasOutcomeCount">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://rsna.org/roadmap/03548"/>
+        <rdfs:range rdf:resource="https://rsna.org/roadmap/04090"/>
+        <rdfs:comment xml:lang="en">was :01128</rdfs:comment>
+        <rdfs:label xml:lang="en">has outcome count</rdfs:label>
+        <skos:definition xml:lang="en">Links a confusion matrix to cell counts (e.g., true positive count), marginal subtotals (e.g., condition positive count), and total outcome count.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://rsna.org/roadmap/hasPart -->
+
+    <owl:ObjectProperty rdf:about="https://rsna.org/roadmap/hasPart">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="https://rsna.org/roadmap/isPartOf"/>
+        <rdfs:comment xml:lang="en">The &apos;has dataset&apos; and &apos;has model&apos; relations are subtypes of &quot;has part&quot;.</rdfs:comment>
+        <rdfs:comment xml:lang="en">was :00201</rdfs:comment>
+        <rdfs:label xml:lang="en">has part</rdfs:label>
+        <skos:altLabel xml:lang="en">hasPart</skos:altLabel>
+        <skos:definition xml:lang="en">Links a class to those classes that may comprise it.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://rsna.org/roadmap/hasResourceMetadata -->
+
+    <owl:ObjectProperty rdf:about="https://rsna.org/roadmap/hasResourceMetadata">
+        <rdfs:comment xml:lang="en">was :03865</rdfs:comment>
+        <rdfs:label xml:lang="en">has resource metadata</rdfs:label>
+        <skos:definition xml:lang="en">Links an AI resource to its metadata.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://rsna.org/roadmap/hasRole -->
+
+    <owl:ObjectProperty rdf:about="https://rsna.org/roadmap/hasRole">
+        <owl:inverseOf rdf:resource="https://rsna.org/roadmap/isRoleFor"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://rsna.org/roadmap/00003"/>
+                    <rdf:Description rdf:about="https://rsna.org/roadmap/00665"/>
+                    <rdf:Description rdf:about="https://rsna.org/roadmap/03472"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="https://rsna.org/roadmap/03763"/>
+        <rdfs:comment xml:lang="en">For example, this relation allows &apos;training partition&apos; to be defined as equivalent to a partition that &apos;has role&apos; training.</rdfs:comment>
+        <rdfs:comment xml:lang="en">was :03769</rdfs:comment>
+        <rdfs:label xml:lang="en">has role</rdfs:label>
+        <skos:definition xml:lang="en">For a dataset, or partition or subset thereof, this relation Identifies its role in development of an AI model, such as training or testing.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://rsna.org/roadmap/hasScalarMetric -->
+
+    <owl:ObjectProperty rdf:about="https://rsna.org/roadmap/hasScalarMetric">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="https://rsna.org/roadmap/isScalarMetricFor"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://rsna.org/roadmap/03778"/>
+        <rdfs:range rdf:resource="https://rsna.org/roadmap/03302"/>
+        <rdfs:comment xml:lang="en">was :03645</rdfs:comment>
+        <rdfs:label xml:lang="en">has scalar metric</rdfs:label>
+        <skos:altLabel xml:lang="en">hasScalarMetric</skos:altLabel>
+        <skos:definition xml:lang="en">This property links a graphical metric (e.g., an ROC curve) or a matrix metric to a scalar metric (e.g., AUROC).</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://rsna.org/roadmap/hasUse -->
+
+    <owl:ObjectProperty rdf:about="https://rsna.org/roadmap/hasUse">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:range rdf:resource="https://rsna.org/roadmap/00015"/>
+        <rdfs:comment xml:lang="en">was :00629</rdfs:comment>
+        <rdfs:label xml:lang="en">has use</rdfs:label>
+        <skos:altLabel xml:lang="en">hasUse</skos:altLabel>
+        <skos:definition xml:lang="en">Specifies a model&apos;s types of intended, out-of-scope, and/or excluded uses.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://rsna.org/roadmap/hasUser -->
+
+    <owl:ObjectProperty rdf:about="https://rsna.org/roadmap/hasUser">
+        <rdfs:range rdf:resource="https://rsna.org/roadmap/00040"/>
+        <rdfs:comment xml:lang="en">was :00630</rdfs:comment>
+        <rdfs:label xml:lang="en">has user</rdfs:label>
+        <skos:altLabel xml:lang="en">hasUser</skos:altLabel>
+        <skos:definition xml:lang="en">Specifies a model&apos;s types of intended, out-of-scope, and/or excluded users.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://rsna.org/roadmap/hasValue -->
+
+    <owl:ObjectProperty rdf:about="https://rsna.org/roadmap/hasValue">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:comment xml:lang="en">was :00631</rdfs:comment>
+        <rdfs:label xml:lang="en">has value</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://rsna.org/roadmap/hasXAxis -->
+
+    <owl:ObjectProperty rdf:about="https://rsna.org/roadmap/hasXAxis">
+        <rdfs:subPropertyOf rdf:resource="https://rsna.org/roadmap/hasAxis"/>
+        <rdfs:domain rdf:resource="https://rsna.org/roadmap/03641"/>
+        <rdfs:range rdf:resource="https://rsna.org/roadmap/03302"/>
+        <rdfs:comment xml:lang="en">was :00157</rdfs:comment>
+        <rdfs:label xml:lang="en">has x-axis</rdfs:label>
+        <skos:altLabel xml:lang="en">x-axis</skos:altLabel>
+        <skos:definition xml:lang="en">References the x-axis of a graphical metric.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://rsna.org/roadmap/hasYAxis -->
+
+    <owl:ObjectProperty rdf:about="https://rsna.org/roadmap/hasYAxis">
+        <rdfs:subPropertyOf rdf:resource="https://rsna.org/roadmap/hasAxis"/>
+        <rdfs:domain rdf:resource="https://rsna.org/roadmap/03641"/>
+        <rdfs:range rdf:resource="https://rsna.org/roadmap/03302"/>
+        <rdfs:comment xml:lang="en">was :00158</rdfs:comment>
+        <rdfs:label xml:lang="en">has y-axis</rdfs:label>
+        <skos:altLabel xml:lang="en">y-axis</skos:altLabel>
+        <skos:definition xml:lang="en">References the y-axis of a graphical metric.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://rsna.org/roadmap/isDatasetOf -->
+
+    <owl:ObjectProperty rdf:about="https://rsna.org/roadmap/isDatasetOf">
+        <rdfs:subPropertyOf rdf:resource="https://rsna.org/roadmap/isPartOf"/>
+        <rdfs:domain rdf:resource="https://rsna.org/roadmap/00003"/>
+        <rdfs:range rdf:resource="https://rsna.org/roadmap/00010"/>
+        <rdfs:comment xml:lang="en">was :03863</rdfs:comment>
+        <rdfs:label xml:lang="en">is dataset of</rdfs:label>
+        <skos:definition xml:lang="en">Inverse of &quot;has dataset&quot;: it links a dataset to its project.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://rsna.org/roadmap/isItemOf -->
+
+    <owl:ObjectProperty rdf:about="https://rsna.org/roadmap/isItemOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:comment xml:lang="en">was :04089</rdfs:comment>
+        <rdfs:label xml:lang="en">is item of</rdfs:label>
+        <skos:altLabel xml:lang="en">belongs to</skos:altLabel>
+        <skos:altLabel xml:lang="en">belongsTo</skos:altLabel>
+        <skos:definition xml:lang="en">Links a guideline item (e.g., CLAIM item 01) to its guideline or an ethical principle to its framework (e.g., findability to FAIR).</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://rsna.org/roadmap/isMeasuredBy -->
+
+    <owl:ObjectProperty rdf:about="https://rsna.org/roadmap/isMeasuredBy">
+        <owl:inverseOf rdf:resource="https://rsna.org/roadmap/measures"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://rsna.org/roadmap/04043"/>
+        <rdfs:range rdf:resource="https://rsna.org/roadmap/03642"/>
+        <rdfs:comment xml:lang="en">was :03719</rdfs:comment>
+        <rdfs:label xml:lang="en">is measured by</rdfs:label>
+        <skos:altLabel xml:lang="en">isMeasuredBy</skos:altLabel>
+        <skos:definition xml:lang="en">Inverse of &quot;measures&quot; relation.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://rsna.org/roadmap/isModelOf -->
+
+    <owl:ObjectProperty rdf:about="https://rsna.org/roadmap/isModelOf">
+        <rdfs:subPropertyOf rdf:resource="https://rsna.org/roadmap/isPartOf"/>
+        <rdfs:domain rdf:resource="https://rsna.org/roadmap/00002"/>
+        <rdfs:range rdf:resource="https://rsna.org/roadmap/00010"/>
+        <rdfs:comment xml:lang="en">was :03864</rdfs:comment>
+        <rdfs:label xml:lang="en">is model of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://rsna.org/roadmap/isPartOf -->
+
+    <owl:ObjectProperty rdf:about="https://rsna.org/roadmap/isPartOf">
+        <rdfs:comment xml:lang="en">May be used to indicate the project to which a model or dataset belongs.</rdfs:comment>
+        <rdfs:comment xml:lang="en">was :03777</rdfs:comment>
+        <rdfs:label xml:lang="en">is part of</rdfs:label>
+        <skos:definition xml:lang="en">Inverse of &quot;has part&quot; relation. Indicates the target class to which the subject belongs.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://rsna.org/roadmap/isRoleFor -->
+
+    <owl:ObjectProperty rdf:about="https://rsna.org/roadmap/isRoleFor">
+        <rdfs:domain rdf:resource="https://rsna.org/roadmap/03763"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://rsna.org/roadmap/00003"/>
+                    <rdf:Description rdf:about="https://rsna.org/roadmap/00665"/>
+                    <rdf:Description rdf:about="https://rsna.org/roadmap/03472"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">was :03770</rdfs:comment>
+        <rdfs:label xml:lang="en">is role for</rdfs:label>
+        <skos:definition xml:lang="en">Inverse of &quot;has role&quot;: specifies the use (training, testing, etc.) of a dataset or part thereof.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://rsna.org/roadmap/isScalarMetricFor -->
+
+    <owl:ObjectProperty rdf:about="https://rsna.org/roadmap/isScalarMetricFor">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://rsna.org/roadmap/03302"/>
+        <rdfs:range rdf:resource="https://rsna.org/roadmap/03778"/>
+        <rdfs:comment xml:lang="en">was :03628</rdfs:comment>
+        <rdfs:label xml:lang="en">is scalar metric for</rdfs:label>
+        <skos:definition xml:lang="en">Inverse of &quot;has scalar metric&quot; relation: links a scalar metric to associated graphical metric(s) and/or matrix metric(s).</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://rsna.org/roadmap/isSupportedBy -->
+
+    <owl:ObjectProperty rdf:about="https://rsna.org/roadmap/isSupportedBy">
+        <owl:inverseOf rdf:resource="https://rsna.org/roadmap/supports"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://rsna.org/roadmap/00177"/>
+                    <rdf:Description rdf:about="https://rsna.org/roadmap/03805"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://rsna.org/roadmap/00177"/>
+                    <rdf:Description rdf:about="https://rsna.org/roadmap/03788"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:comment xml:lang="en">Indicates a metadata class or guideline-item instance that helps satisfy, operationalize, or support a guideline item or ethical principle.</rdfs:comment>
+        <rdfs:comment xml:lang="en">was :00222</rdfs:comment>
+        <rdfs:label xml:lang="en">is supported by</rdfs:label>
+        <skos:definition xml:lang="en">Inverse of &quot;supports&quot; relation.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://rsna.org/roadmap/measures -->
+
+    <owl:ObjectProperty rdf:about="https://rsna.org/roadmap/measures">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="https://rsna.org/roadmap/03642"/>
+        <rdfs:range rdf:resource="https://rsna.org/roadmap/04043"/>
+        <rdfs:comment xml:lang="en">Inverse relation &quot;is measured by&quot;</rdfs:comment>
+        <rdfs:comment xml:lang="en">was :03648</rdfs:comment>
+        <rdfs:label xml:lang="en">measures</rdfs:label>
+        <skos:altLabel xml:lang="en">metric for</skos:altLabel>
+        <skos:altLabel xml:lang="en">metricFor</skos:altLabel>
+        <skos:definition xml:lang="en">Expresses the relationship between a model performance metric and the performance criterion that it measures. For example, Dice coefficient measures image segmentation performance.</skos:definition>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://rsna.org/roadmap/metadataSupportsPrinciple -->
+
+    <owl:ObjectProperty rdf:about="https://rsna.org/roadmap/metadataSupportsPrinciple">
+        <rdfs:subPropertyOf rdf:resource="https://rsna.org/roadmap/supportsPrinciple"/>
+        <rdfs:domain rdf:resource="https://rsna.org/roadmap/03788"/>
+        <rdfs:range rdf:resource="https://rsna.org/roadmap/03805"/>
+        <rdfs:comment xml:lang="en">Not currently used.</rdfs:comment>
+        <rdfs:comment xml:lang="en">was :03921</rdfs:comment>
+        <rdfs:label xml:lang="en">metadata supports principle</rdfs:label>
+        <skos:definition xml:lang="en">A sub-property of &quot;supports&quot; that links metadata directly to an ethical principle: &quot;Recording this attribute advances the principle regardless of any manuscript.&quot;</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -301,8 +784,6 @@
     <!-- https://rsna.org/roadmap/supports -->
 
     <owl:ObjectProperty rdf:about="https://rsna.org/roadmap/supports">
-        <owl:equivalentProperty rdf:resource="https://rsna.org/roadmap/00198"/>
-        <owl:inverseOf rdf:resource="https://rsna.org/roadmap/00222"/>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -332,469 +813,23 @@ Note that this property is *not* transitive: some guideline items are disjunctio
     
 
 
-    <!-- https://rsna.org/roadmap/00114 -->
+    <!-- https://rsna.org/roadmap/supportsGuidelineItem -->
 
-    <owl:ObjectProperty rdf:about="https://rsna.org/roadmap/00114">
-        <rdfs:subPropertyOf rdf:resource="https://rsna.org/roadmap/00201"/>
-        <owl:inverseOf rdf:resource="https://rsna.org/roadmap/03864"/>
-        <rdfs:domain rdf:resource="https://rsna.org/roadmap/00010"/>
-        <rdfs:range rdf:resource="https://rsna.org/roadmap/00002"/>
-        <rdfs:label xml:lang="en">has model</rdfs:label>
-        <skos:definition xml:lang="en">The property that links a Project to its related Model(s).</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://rsna.org/roadmap/00115 -->
-
-    <owl:ObjectProperty rdf:about="https://rsna.org/roadmap/00115">
-        <rdfs:subPropertyOf rdf:resource="https://rsna.org/roadmap/00201"/>
-        <owl:inverseOf rdf:resource="https://rsna.org/roadmap/03863"/>
-        <rdfs:domain rdf:resource="https://rsna.org/roadmap/00010"/>
-        <rdfs:range rdf:resource="https://rsna.org/roadmap/00003"/>
-        <rdfs:label xml:lang="en">has dataset</rdfs:label>
-        <skos:definition xml:lang="en">The property that links a Project to its related Dataset(s).</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://rsna.org/roadmap/00116 -->
-
-    <owl:ObjectProperty rdf:about="https://rsna.org/roadmap/00116">
-        <rdfs:subPropertyOf rdf:resource="https://rsna.org/roadmap/03865"/>
-        <rdfs:domain rdf:resource="https://rsna.org/roadmap/00657"/>
-        <rdfs:range rdf:resource="https://rsna.org/roadmap/00004"/>
-        <rdfs:label xml:lang="en">has general metadata</rdfs:label>
-        <skos:altLabel xml:lang="en">has descriptor</skos:altLabel>
-        <skos:definition xml:lang="en">Links a model, dataset, or project to its general metadata.</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://rsna.org/roadmap/00130 -->
-
-    <owl:ObjectProperty rdf:about="https://rsna.org/roadmap/00130">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:range rdf:resource="https://rsna.org/roadmap/00055"/>
-        <rdfs:label xml:lang="en">has count</rdfs:label>
-        <skos:altLabel xml:lang="en">hasCount</skos:altLabel>
-        <skos:definition xml:lang="en">Specifies the number of patients, images, etc. for a subset or partition.</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://rsna.org/roadmap/00157 -->
-
-    <owl:ObjectProperty rdf:about="https://rsna.org/roadmap/00157">
-        <rdfs:subPropertyOf rdf:resource="https://rsna.org/roadmap/00159"/>
-        <rdfs:domain rdf:resource="https://rsna.org/roadmap/03641"/>
-        <rdfs:range rdf:resource="https://rsna.org/roadmap/03302"/>
-        <rdfs:label xml:lang="en">has x-axis</rdfs:label>
-        <skos:altLabel xml:lang="en">x-axis</skos:altLabel>
-        <skos:definition xml:lang="en">References the x-axis of a graphical metric.</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://rsna.org/roadmap/00158 -->
-
-    <owl:ObjectProperty rdf:about="https://rsna.org/roadmap/00158">
-        <rdfs:subPropertyOf rdf:resource="https://rsna.org/roadmap/00159"/>
-        <rdfs:domain rdf:resource="https://rsna.org/roadmap/03641"/>
-        <rdfs:range rdf:resource="https://rsna.org/roadmap/03302"/>
-        <rdfs:label xml:lang="en">has y-axis</rdfs:label>
-        <skos:altLabel xml:lang="en">y-axis</skos:altLabel>
-        <skos:definition xml:lang="en">References the y-axis of a graphical metric.</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://rsna.org/roadmap/00159 -->
-
-    <owl:ObjectProperty rdf:about="https://rsna.org/roadmap/00159">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:domain rdf:resource="https://rsna.org/roadmap/03641"/>
-        <rdfs:range rdf:resource="https://rsna.org/roadmap/03302"/>
-        <rdfs:label xml:lang="en">has axis</rdfs:label>
-        <skos:definition xml:lang="en">Specifies an axis for graphical metrics.</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://rsna.org/roadmap/00198 -->
-
-    <owl:ObjectProperty rdf:about="https://rsna.org/roadmap/00198">
-        <dcterms:isReplacedBy rdf:resource="https://rsna.org/roadmap/supports"/>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://rsna.org/roadmap/00201 -->
-
-    <owl:ObjectProperty rdf:about="https://rsna.org/roadmap/00201">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <owl:inverseOf rdf:resource="https://rsna.org/roadmap/03777"/>
-        <rdfs:comment xml:lang="en">The &apos;has dataset&apos; and &apos;has model&apos; relations are subtypes of &quot;has part&quot;.</rdfs:comment>
-        <rdfs:label xml:lang="en">has part</rdfs:label>
-        <skos:altLabel xml:lang="en">hasPart</skos:altLabel>
-        <skos:definition xml:lang="en">Links a class to those classes that may comprise it.</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://rsna.org/roadmap/00222 -->
-
-    <owl:ObjectProperty rdf:about="https://rsna.org/roadmap/00222">
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://rsna.org/roadmap/00177"/>
-                    <rdf:Description rdf:about="https://rsna.org/roadmap/03805"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://rsna.org/roadmap/00177"/>
-                    <rdf:Description rdf:about="https://rsna.org/roadmap/03788"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
-        <rdfs:comment xml:lang="en">Indicates a metadata class or guideline-item instance that helps satisfy, operationalize, or support a guideline item or ethical principle.</rdfs:comment>
-        <rdfs:label xml:lang="en">is supported by</rdfs:label>
-        <skos:definition xml:lang="en">Inverse of &quot;supports&quot; relation.</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://rsna.org/roadmap/00629 -->
-
-    <owl:ObjectProperty rdf:about="https://rsna.org/roadmap/00629">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:range rdf:resource="https://rsna.org/roadmap/00015"/>
-        <rdfs:label xml:lang="en">has use</rdfs:label>
-        <skos:altLabel xml:lang="en">hasUse</skos:altLabel>
-        <skos:definition xml:lang="en">Specifies a model&apos;s types of intended, out-of-scope, and/or excluded uses.</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://rsna.org/roadmap/00630 -->
-
-    <owl:ObjectProperty rdf:about="https://rsna.org/roadmap/00630">
-        <rdfs:range rdf:resource="https://rsna.org/roadmap/00040"/>
-        <rdfs:label xml:lang="en">has user</rdfs:label>
-        <skos:altLabel xml:lang="en">hasUser</skos:altLabel>
-        <skos:definition xml:lang="en">Specifies a model&apos;s types of intended, out-of-scope, and/or excluded users.</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://rsna.org/roadmap/00631 -->
-
-    <owl:ObjectProperty rdf:about="https://rsna.org/roadmap/00631">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:label xml:lang="en">has value</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://rsna.org/roadmap/01128 -->
-
-    <owl:ObjectProperty rdf:about="https://rsna.org/roadmap/01128">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://rsna.org/roadmap/03548"/>
-        <rdfs:range rdf:resource="https://rsna.org/roadmap/04090"/>
-        <rdfs:label xml:lang="en">has outcome count</rdfs:label>
-        <skos:definition xml:lang="en">Links a confusion matrix to cell counts (e.g., true positive count), marginal subtotals (e.g., condition positive count), and total outcome count.</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://rsna.org/roadmap/03350 -->
-
-    <owl:ObjectProperty rdf:about="https://rsna.org/roadmap/03350">
-        <rdfs:subPropertyOf rdf:resource="https://rsna.org/roadmap/03865"/>
-        <rdfs:domain rdf:resource="https://rsna.org/roadmap/00002"/>
-        <rdfs:range rdf:resource="https://rsna.org/roadmap/03355"/>
-        <rdfs:label xml:lang="en">has model property</rdfs:label>
-        <skos:definition xml:lang="en">Links a model to its properties.</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://rsna.org/roadmap/03382 -->
-
-    <owl:ObjectProperty rdf:about="https://rsna.org/roadmap/03382">
-        <rdfs:subPropertyOf rdf:resource="https://rsna.org/roadmap/03865"/>
-        <rdfs:domain rdf:resource="https://rsna.org/roadmap/00003"/>
-        <rdfs:range rdf:resource="https://rsna.org/roadmap/03381"/>
-        <rdfs:label xml:lang="en">has dataset property</rdfs:label>
-        <skos:definition xml:lang="en">Links a dataset to its properties.</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://rsna.org/roadmap/03628 -->
-
-    <owl:ObjectProperty rdf:about="https://rsna.org/roadmap/03628">
-        <owl:inverseOf rdf:resource="https://rsna.org/roadmap/03645"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="https://rsna.org/roadmap/03302"/>
-        <rdfs:range rdf:resource="https://rsna.org/roadmap/03778"/>
-        <rdfs:label xml:lang="en">is scalar metric for</rdfs:label>
-        <skos:definition xml:lang="en">Inverse of &quot;has scalar metric&quot; relation: links a scalar metric to associated graphical metric(s) and/or matrix metric(s).</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://rsna.org/roadmap/03645 -->
-
-    <owl:ObjectProperty rdf:about="https://rsna.org/roadmap/03645">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="https://rsna.org/roadmap/03778"/>
-        <rdfs:range rdf:resource="https://rsna.org/roadmap/03302"/>
-        <rdfs:label xml:lang="en">has scalar metric</rdfs:label>
-        <skos:altLabel xml:lang="en">hasScalarMetric</skos:altLabel>
-        <skos:definition xml:lang="en">This property links a graphical metric (e.g., an ROC curve) or a matrix metric to a scalar metric (e.g., AUROC).</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://rsna.org/roadmap/03648 -->
-
-    <owl:ObjectProperty rdf:about="https://rsna.org/roadmap/03648">
-        <owl:inverseOf rdf:resource="https://rsna.org/roadmap/03719"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="https://rsna.org/roadmap/03642"/>
-        <rdfs:range rdf:resource="https://rsna.org/roadmap/04043"/>
-        <rdfs:comment xml:lang="en">Inverse relation &quot;is measured by&quot;</rdfs:comment>
-        <rdfs:label xml:lang="en">measures</rdfs:label>
-        <skos:altLabel xml:lang="en">metric for</skos:altLabel>
-        <skos:altLabel xml:lang="en">metricFor</skos:altLabel>
-        <skos:definition xml:lang="en">Expresses the relationship between a model performance metric and the performance criterion that it measures. For example, Dice coefficient measures image segmentation performance.</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://rsna.org/roadmap/03709 -->
-
-    <owl:ObjectProperty rdf:about="https://rsna.org/roadmap/03709">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="https://rsna.org/roadmap/03808"/>
-        <rdfs:range rdf:resource="https://rsna.org/roadmap/03642"/>
-        <oboInOwl:hasRelatedSynonym xml:lang="en">has performance</oboInOwl:hasRelatedSynonym>
-        <rdfs:comment xml:lang="en">This property links a model to one or more model performance metrics.</rdfs:comment>
-        <rdfs:label xml:lang="en">has metric</rdfs:label>
-        <skos:definition xml:lang="en">Defines a relationship between a model and the metrics that describe its performance.</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://rsna.org/roadmap/03719 -->
-
-    <owl:ObjectProperty rdf:about="https://rsna.org/roadmap/03719">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
-        <rdfs:domain rdf:resource="https://rsna.org/roadmap/04043"/>
-        <rdfs:range rdf:resource="https://rsna.org/roadmap/03642"/>
-        <rdfs:label xml:lang="en">is measured by</rdfs:label>
-        <skos:altLabel xml:lang="en">isMeasuredBy</skos:altLabel>
-        <skos:definition xml:lang="en">Inverse of &quot;measures&quot; relation.</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://rsna.org/roadmap/03769 -->
-
-    <owl:ObjectProperty rdf:about="https://rsna.org/roadmap/03769">
-        <owl:inverseOf rdf:resource="https://rsna.org/roadmap/03770"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://rsna.org/roadmap/00003"/>
-                    <rdf:Description rdf:about="https://rsna.org/roadmap/00665"/>
-                    <rdf:Description rdf:about="https://rsna.org/roadmap/03472"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
-        <rdfs:range rdf:resource="https://rsna.org/roadmap/03763"/>
-        <rdfs:comment xml:lang="en">For example, this relation allows &apos;training partition&apos; to be defined as equivalent to a partition that &apos;has role&apos; training.</rdfs:comment>
-        <rdfs:label xml:lang="en">has role</rdfs:label>
-        <skos:definition xml:lang="en">For a dataset, or partition or subset thereof, this relation Identifies its role in development of an AI model, such as training or testing.</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://rsna.org/roadmap/03770 -->
-
-    <owl:ObjectProperty rdf:about="https://rsna.org/roadmap/03770">
-        <rdfs:domain rdf:resource="https://rsna.org/roadmap/03763"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="https://rsna.org/roadmap/00003"/>
-                    <rdf:Description rdf:about="https://rsna.org/roadmap/00665"/>
-                    <rdf:Description rdf:about="https://rsna.org/roadmap/03472"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
-        <rdfs:label xml:lang="en">is role for</rdfs:label>
-        <skos:definition xml:lang="en">Inverse of &quot;has role&quot;: specifies the use (training, testing, etc.) of a dataset or part thereof.</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://rsna.org/roadmap/03776 -->
-
-    <owl:ObjectProperty rdf:about="https://rsna.org/roadmap/03776">
-        <dcterms:isReplacedBy rdf:resource="https://rsna.org/roadmap/hasGuidelineItem"/>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://rsna.org/roadmap/03777 -->
-
-    <owl:ObjectProperty rdf:about="https://rsna.org/roadmap/03777">
-        <rdfs:comment xml:lang="en">May be used to indicate the project to which a model or dataset belongs.</rdfs:comment>
-        <rdfs:label xml:lang="en">is part of</rdfs:label>
-        <skos:definition xml:lang="en">Inverse of &quot;has part&quot; relation. Indicates the target class to which the subject belongs.</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://rsna.org/roadmap/03831 -->
-
-    <owl:ObjectProperty rdf:about="https://rsna.org/roadmap/03831">
-        <rdfs:domain rdf:resource="https://rsna.org/roadmap/00657"/>
-        <rdfs:range rdf:resource="https://rsna.org/roadmap/00074"/>
-        <rdfs:label xml:lang="en">has index</rdfs:label>
-        <skos:definition xml:lang="en">Links an AI resource to indexing code(s).</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://rsna.org/roadmap/03833 -->
-
-    <owl:ObjectProperty rdf:about="https://rsna.org/roadmap/03833">
-        <rdfs:domain rdf:resource="https://rsna.org/roadmap/03808"/>
-        <rdfs:range rdf:resource="https://rsna.org/roadmap/03832"/>
-        <rdfs:label xml:lang="en">evaluates performance on</rdfs:label>
-        <skos:definition xml:lang="en">References the evaluation dataset used to assess a model&apos;s performance.</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://rsna.org/roadmap/03840 -->
-
-    <owl:ObjectProperty rdf:about="https://rsna.org/roadmap/03840">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <owl:inverseOf rdf:resource="https://rsna.org/roadmap/04089"/>
-        <rdfs:label xml:lang="en">has item</rdfs:label>
-        <skos:definition xml:lang="en">Links a guideline (e.g., CLAIM) to its items or an ethical framework (e.g., FAIR) to its principles.</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://rsna.org/roadmap/03841 -->
-
-    <owl:ObjectProperty rdf:about="https://rsna.org/roadmap/03841">
-        <dcterms:isReplacedBy rdf:resource="https://rsna.org/roadmap/hasEthicalPrinciple"/>
-        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://rsna.org/roadmap/03848 -->
-
-    <owl:ObjectProperty rdf:about="https://rsna.org/roadmap/03848">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://rsna.org/roadmap/03423"/>
-        <rdfs:range rdf:resource="https://rsna.org/roadmap/03467"/>
-        <rdfs:label xml:lang="en">has age unit</rdfs:label>
-        <skos:definition xml:lang="en">Specifies the units for a stated age.</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://rsna.org/roadmap/03849 -->
-
-    <owl:ObjectProperty rdf:about="https://rsna.org/roadmap/03849">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://rsna.org/roadmap/03808"/>
-        <rdfs:range rdf:resource="https://rsna.org/roadmap/00672"/>
-        <rdfs:label xml:lang="en">has confidence interval</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://rsna.org/roadmap/03862 -->
-
-    <owl:ObjectProperty rdf:about="https://rsna.org/roadmap/03862">
-        <rdfs:subPropertyOf rdf:resource="https://rsna.org/roadmap/00201"/>
-        <rdfs:label xml:lang="en">has data</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://rsna.org/roadmap/03863 -->
-
-    <owl:ObjectProperty rdf:about="https://rsna.org/roadmap/03863">
-        <rdfs:subPropertyOf rdf:resource="https://rsna.org/roadmap/03777"/>
-        <rdfs:domain rdf:resource="https://rsna.org/roadmap/00003"/>
-        <rdfs:range rdf:resource="https://rsna.org/roadmap/00010"/>
-        <rdfs:label xml:lang="en">is dataset of</rdfs:label>
-        <skos:definition xml:lang="en">Inverse of &quot;has dataset&quot;: it links a dataset to its project.</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://rsna.org/roadmap/03864 -->
-
-    <owl:ObjectProperty rdf:about="https://rsna.org/roadmap/03864">
-        <rdfs:subPropertyOf rdf:resource="https://rsna.org/roadmap/03777"/>
-        <rdfs:domain rdf:resource="https://rsna.org/roadmap/00002"/>
-        <rdfs:range rdf:resource="https://rsna.org/roadmap/00010"/>
-        <rdfs:label xml:lang="en">is model of</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://rsna.org/roadmap/03865 -->
-
-    <owl:ObjectProperty rdf:about="https://rsna.org/roadmap/03865">
-        <rdfs:label xml:lang="en">has resource metadata</rdfs:label>
-        <skos:definition xml:lang="en">Links an AI resource to its metadata.</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://rsna.org/roadmap/03918 -->
-
-    <owl:ObjectProperty rdf:about="https://rsna.org/roadmap/03918">
+    <owl:ObjectProperty rdf:about="https://rsna.org/roadmap/supportsGuidelineItem">
         <rdfs:subPropertyOf rdf:resource="https://rsna.org/roadmap/supports"/>
         <rdfs:domain rdf:resource="https://rsna.org/roadmap/03788"/>
         <rdfs:range rdf:resource="https://rsna.org/roadmap/00177"/>
         <rdfs:comment xml:lang="en">Not currently used.</rdfs:comment>
+        <rdfs:comment xml:lang="en">was :03918</rdfs:comment>
         <rdfs:label xml:lang="en">supports guideline item</rdfs:label>
         <skos:definition xml:lang="en">A sub-property of &quot;supports&quot; that links a metadata entity (an AI resource attribute) to a guideline item: &quot;Recording this artifact attribute supplies the evidence a manuscript needs to satisfy this reporting item.&quot;</skos:definition>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://rsna.org/roadmap/03919 -->
+    <!-- https://rsna.org/roadmap/supportsPrinciple -->
 
-    <owl:ObjectProperty rdf:about="https://rsna.org/roadmap/03919">
+    <owl:ObjectProperty rdf:about="https://rsna.org/roadmap/supportsPrinciple">
         <rdfs:subPropertyOf rdf:resource="https://rsna.org/roadmap/supports"/>
         <rdfs:domain>
             <owl:Class>
@@ -806,45 +841,8 @@ Note that this property is *not* transitive: some guideline items are disjunctio
         </rdfs:domain>
         <rdfs:range rdf:resource="https://rsna.org/roadmap/03805"/>
         <rdfs:comment xml:lang="en">Not currently used.</rdfs:comment>
+        <rdfs:comment xml:lang="en">was :03919</rdfs:comment>
         <rdfs:label xml:lang="en">supports principle</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://rsna.org/roadmap/03920 -->
-
-    <owl:ObjectProperty rdf:about="https://rsna.org/roadmap/03920">
-        <rdfs:subPropertyOf rdf:resource="https://rsna.org/roadmap/03919"/>
-        <rdfs:domain rdf:resource="https://rsna.org/roadmap/00177"/>
-        <rdfs:range rdf:resource="https://rsna.org/roadmap/03805"/>
-        <rdfs:comment xml:lang="en">Not currently used.</rdfs:comment>
-        <rdfs:label xml:lang="en">guideline item supports principle</rdfs:label>
-        <skos:definition xml:lang="en">A sub-property of &quot;supports&quot; that links a guideline item to an ethical principle: &quot;A manuscript satisfying this item advances this principle.&quot;</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://rsna.org/roadmap/03921 -->
-
-    <owl:ObjectProperty rdf:about="https://rsna.org/roadmap/03921">
-        <rdfs:subPropertyOf rdf:resource="https://rsna.org/roadmap/03919"/>
-        <rdfs:domain rdf:resource="https://rsna.org/roadmap/03788"/>
-        <rdfs:range rdf:resource="https://rsna.org/roadmap/03805"/>
-        <rdfs:comment xml:lang="en">Not currently used.</rdfs:comment>
-        <rdfs:label xml:lang="en">metadata supports principle</rdfs:label>
-        <skos:definition xml:lang="en">A sub-property of &quot;supports&quot; that links metadata directly to an ethical principle: &quot;Recording this attribute advances the principle regardless of any manuscript.&quot;</skos:definition>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- https://rsna.org/roadmap/04089 -->
-
-    <owl:ObjectProperty rdf:about="https://rsna.org/roadmap/04089">
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:label xml:lang="en">is item of</rdfs:label>
-        <skos:altLabel xml:lang="en">belongs to</skos:altLabel>
-        <skos:altLabel xml:lang="en">belongsTo</skos:altLabel>
-        <skos:definition xml:lang="en">Links a guideline item (e.g., CLAIM item 01) to its guideline or an ethical principle to its framework (e.g., findability to FAIR).</skos:definition>
     </owl:ObjectProperty>
     
 
@@ -866,10 +864,131 @@ Note that this property is *not* transitive: some guideline items are disjunctio
     
 
 
+    <!-- https://rsna.org/roadmap/ageRangeValues -->
+
+    <owl:DatatypeProperty rdf:about="https://rsna.org/roadmap/ageRangeValues">
+        <rdfs:domain rdf:resource="https://rsna.org/roadmap/03462"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">was :03844</rdfs:comment>
+        <rdfs:label xml:lang="en">age range values</rdfs:label>
+        <skos:definition xml:lang="en">An age range&apos;s lower and upper bounds.</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://rsna.org/roadmap/confidenceIntervalProperty -->
+
+    <owl:DatatypeProperty rdf:about="https://rsna.org/roadmap/confidenceIntervalProperty">
+        <rdfs:domain rdf:resource="https://rsna.org/roadmap/00672"/>
+        <rdfs:comment xml:lang="en">was :03839</rdfs:comment>
+        <rdfs:label xml:lang="en">confidence interval property</rdfs:label>
+        <skos:definition xml:lang="en">A confidence interval is defined by a lower limit, upper limit, and confidence level.</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://rsna.org/roadmap/confidenceLevel -->
+
+    <owl:DatatypeProperty rdf:about="https://rsna.org/roadmap/confidenceLevel">
+        <rdfs:subPropertyOf rdf:resource="https://rsna.org/roadmap/confidenceIntervalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://rsna.org/roadmap/00672"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">was :01500</rdfs:comment>
+        <rdfs:label xml:lang="en">confidence level</rdfs:label>
+        <skos:definition xml:lang="en">The probability that the confidence interval contains the true parameter value, expressed as a proportion. For example, confidence level = 0.95 for the 95% confidence interval.</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://rsna.org/roadmap/hasDateValue -->
+
+    <owl:DatatypeProperty rdf:about="https://rsna.org/roadmap/hasDateValue">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">was :03821</rdfs:comment>
+        <rdfs:label xml:lang="en">has date value</rdfs:label>
+        <skos:definition xml:lang="en">Specifies a date (and time) value for an entity.</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://rsna.org/roadmap/hasDecimalValue -->
+
+    <owl:DatatypeProperty rdf:about="https://rsna.org/roadmap/hasDecimalValue">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">was :03822</rdfs:comment>
+        <rdfs:label xml:lang="en">has decimal value</rdfs:label>
+        <skos:definition xml:lang="en">Specifies a decimal value for an entity.</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://rsna.org/roadmap/hasIntegerValue -->
+
+    <owl:DatatypeProperty rdf:about="https://rsna.org/roadmap/hasIntegerValue">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+        <rdfs:comment xml:lang="en">was :03820</rdfs:comment>
+        <rdfs:label xml:lang="en">has integer value</rdfs:label>
+        <skos:definition xml:lang="en">Specifies a non-negative integer value for an entity.</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://rsna.org/roadmap/hasStringValue -->
+
+    <owl:DatatypeProperty rdf:about="https://rsna.org/roadmap/hasStringValue">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">was :03795</rdfs:comment>
+        <rdfs:label xml:lang="en">has string value</rdfs:label>
+        <skos:definition xml:lang="en">Specifies a string value.</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://rsna.org/roadmap/hasURI -->
+
+    <owl:DatatypeProperty rdf:about="https://rsna.org/roadmap/hasURI">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment xml:lang="en">was :03819</rdfs:comment>
+        <rdfs:label xml:lang="en">has URI</rdfs:label>
+        <skos:definition xml:lang="en">Specifies a Uniform Resource Identifier (URI) for an entity.</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://rsna.org/roadmap/lowerAgeValue -->
+
+    <owl:DatatypeProperty rdf:about="https://rsna.org/roadmap/lowerAgeValue">
+        <rdfs:subPropertyOf rdf:resource="https://rsna.org/roadmap/ageRangeValues"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://rsna.org/roadmap/03462"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">was :03845</rdfs:comment>
+        <rdfs:label xml:lang="en">lower age value</rdfs:label>
+        <skos:definition xml:lang="en">The lower bound of age range.</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://rsna.org/roadmap/lowerConfidenceLimit -->
+
+    <owl:DatatypeProperty rdf:about="https://rsna.org/roadmap/lowerConfidenceLimit">
+        <rdfs:subPropertyOf rdf:resource="https://rsna.org/roadmap/confidenceIntervalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://rsna.org/roadmap/00672"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">was :03796</rdfs:comment>
+        <rdfs:label xml:lang="en">lower confidence limit</rdfs:label>
+        <skos:definition xml:lang="en">The lower confidence limit is a data item which is a lowest value bounding a confidence interval.</skos:definition>
+        <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/STATO_0000315"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://rsna.org/roadmap/maximum -->
 
     <owl:DatatypeProperty rdf:about="https://rsna.org/roadmap/maximum">
-        <rdfs:subPropertyOf rdf:resource="https://rsna.org/roadmap/03838"/>
+        <rdfs:subPropertyOf rdf:resource="https://rsna.org/roadmap/scalarMetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://rsna.org/roadmap/03302"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
@@ -883,10 +1002,21 @@ Note that this property is *not* transitive: some guideline items are disjunctio
     
 
 
+    <!-- https://rsna.org/roadmap/metricObservedValue -->
+
+    <owl:DatatypeProperty rdf:about="https://rsna.org/roadmap/metricObservedValue">
+        <rdfs:domain rdf:resource="https://rsna.org/roadmap/03808"/>
+        <rdfs:comment xml:lang="en">was :03843</rdfs:comment>
+        <rdfs:label xml:lang="en">metric observed value</rdfs:label>
+        <skos:definition xml:lang="en">Specifies the observed value of a metric for a model on a specified dataset.</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://rsna.org/roadmap/minimum -->
 
     <owl:DatatypeProperty rdf:about="https://rsna.org/roadmap/minimum">
-        <rdfs:subPropertyOf rdf:resource="https://rsna.org/roadmap/03838"/>
+        <rdfs:subPropertyOf rdf:resource="https://rsna.org/roadmap/scalarMetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://rsna.org/roadmap/03302"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
@@ -899,10 +1029,23 @@ Note that this property is *not* transitive: some guideline items are disjunctio
     
 
 
+    <!-- https://rsna.org/roadmap/nonScalarMetricObservedValue -->
+
+    <owl:DatatypeProperty rdf:about="https://rsna.org/roadmap/nonScalarMetricObservedValue">
+        <rdfs:subPropertyOf rdf:resource="https://rsna.org/roadmap/metricObservedValue"/>
+        <rdfs:domain rdf:resource="https://rsna.org/roadmap/03871"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+        <rdfs:comment xml:lang="en">was :03868</rdfs:comment>
+        <rdfs:label xml:lang="en">non-scalar metric observed value</rdfs:label>
+        <skos:definition xml:lang="en">Specifies the observed value of a non-scalar metric (a graph or matrix) for a model on a specified dataset; that value is a URI that can point to an image, table, or other resource.</skos:definition>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://rsna.org/roadmap/optimum -->
 
     <owl:DatatypeProperty rdf:about="https://rsna.org/roadmap/optimum">
-        <rdfs:subPropertyOf rdf:resource="https://rsna.org/roadmap/03838"/>
+        <rdfs:subPropertyOf rdf:resource="https://rsna.org/roadmap/scalarMetricProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://rsna.org/roadmap/03302"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
@@ -915,185 +1058,56 @@ Note that this property is *not* transitive: some guideline items are disjunctio
     
 
 
-    <!-- https://rsna.org/roadmap/01500 -->
+    <!-- https://rsna.org/roadmap/scalarMetricObservedValue -->
 
-    <owl:DatatypeProperty rdf:about="https://rsna.org/roadmap/01500">
-        <rdfs:subPropertyOf rdf:resource="https://rsna.org/roadmap/03839"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://rsna.org/roadmap/00672"/>
+    <owl:DatatypeProperty rdf:about="https://rsna.org/roadmap/scalarMetricObservedValue">
+        <rdfs:subPropertyOf rdf:resource="https://rsna.org/roadmap/metricObservedValue"/>
+        <rdfs:domain rdf:resource="https://rsna.org/roadmap/03870"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-        <rdfs:label xml:lang="en">confidence level</rdfs:label>
-        <skos:definition xml:lang="en">The probability that the confidence interval contains the true parameter value, expressed as a proportion. For example, confidence level = 0.95 for the 95% confidence interval.</skos:definition>
+        <rdfs:comment xml:lang="en">was :03869</rdfs:comment>
+        <rdfs:label xml:lang="en">scalar metric observed value</rdfs:label>
+        <skos:definition xml:lang="en">Specifies the observed value (xsd:decimal) of a scalar metric for a model on a specified dataset.</skos:definition>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://rsna.org/roadmap/03795 -->
+    <!-- https://rsna.org/roadmap/scalarMetricProperty -->
 
-    <owl:DatatypeProperty rdf:about="https://rsna.org/roadmap/03795">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label xml:lang="en">has string value</rdfs:label>
-        <skos:definition xml:lang="en">Specifies a string value.</skos:definition>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://rsna.org/roadmap/03796 -->
-
-    <owl:DatatypeProperty rdf:about="https://rsna.org/roadmap/03796">
-        <rdfs:subPropertyOf rdf:resource="https://rsna.org/roadmap/03839"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://rsna.org/roadmap/00672"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-        <rdfs:label xml:lang="en">lower confidence limit</rdfs:label>
-        <skos:definition xml:lang="en">The lower confidence limit is a data item which is a lowest value bounding a confidence interval.</skos:definition>
-        <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/STATO_0000315"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://rsna.org/roadmap/03797 -->
-
-    <owl:DatatypeProperty rdf:about="https://rsna.org/roadmap/03797">
-        <rdfs:subPropertyOf rdf:resource="https://rsna.org/roadmap/03839"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://rsna.org/roadmap/00672"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-        <rdfs:label xml:lang="en">upper confidence limit</rdfs:label>
-        <skos:definition xml:lang="en">The upper confidence limit is the largest value bounding a confidence interval</skos:definition>
-        <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/STATO_0000314"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://rsna.org/roadmap/03819 -->
-
-    <owl:DatatypeProperty rdf:about="https://rsna.org/roadmap/03819">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
-        <rdfs:label xml:lang="en">has URI</rdfs:label>
-        <skos:definition xml:lang="en">Specifies a Uniform Resource Identifier (URI) for an entity.</skos:definition>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://rsna.org/roadmap/03820 -->
-
-    <owl:DatatypeProperty rdf:about="https://rsna.org/roadmap/03820">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
-        <rdfs:label xml:lang="en">has integer value</rdfs:label>
-        <skos:definition xml:lang="en">Specifies a non-negative integer value for an entity.</skos:definition>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://rsna.org/roadmap/03821 -->
-
-    <owl:DatatypeProperty rdf:about="https://rsna.org/roadmap/03821">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
-        <rdfs:label xml:lang="en">has date value</rdfs:label>
-        <skos:definition xml:lang="en">Specifies a date (and time) value for an entity.</skos:definition>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://rsna.org/roadmap/03822 -->
-
-    <owl:DatatypeProperty rdf:about="https://rsna.org/roadmap/03822">
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-        <rdfs:label xml:lang="en">has decimal value</rdfs:label>
-        <skos:definition xml:lang="en">Specifies a decimal value for an entity.</skos:definition>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://rsna.org/roadmap/03838 -->
-
-    <owl:DatatypeProperty rdf:about="https://rsna.org/roadmap/03838">
+    <owl:DatatypeProperty rdf:about="https://rsna.org/roadmap/scalarMetricProperty">
         <rdfs:domain rdf:resource="https://rsna.org/roadmap/03302"/>
         <rdfs:comment xml:lang="en">If unbounded (i.e., INF or -INF), the maximum and minimum values are absent. These values are specified as Data Properties (rather than Annotation Properties) so that they can be queried or used in analysis.</rdfs:comment>
+        <rdfs:comment xml:lang="en">was :03838</rdfs:comment>
         <rdfs:label xml:lang="en">scalar metric property</rdfs:label>
         <skos:definition xml:lang="en">These data properties -- minimum, maximum, and optimum -- specify a scalar metric&apos;s lowest, highest, and &quot;ideal&quot; numerical values, respectively.</skos:definition>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://rsna.org/roadmap/03839 -->
+    <!-- https://rsna.org/roadmap/upperAgeValue -->
 
-    <owl:DatatypeProperty rdf:about="https://rsna.org/roadmap/03839">
-        <rdfs:domain rdf:resource="https://rsna.org/roadmap/00672"/>
-        <rdfs:label xml:lang="en">confidence interval property</rdfs:label>
-        <skos:definition xml:lang="en">A confidence interval is defined by a lower limit, upper limit, and confidence level.</skos:definition>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://rsna.org/roadmap/03843 -->
-
-    <owl:DatatypeProperty rdf:about="https://rsna.org/roadmap/03843">
-        <rdfs:domain rdf:resource="https://rsna.org/roadmap/03808"/>
-        <rdfs:label xml:lang="en">metric observed value</rdfs:label>
-        <skos:definition xml:lang="en">Specifies the observed value of a metric for a model on a specified dataset.</skos:definition>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://rsna.org/roadmap/03844 -->
-
-    <owl:DatatypeProperty rdf:about="https://rsna.org/roadmap/03844">
-        <rdfs:domain rdf:resource="https://rsna.org/roadmap/03462"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-        <rdfs:label xml:lang="en">age range values</rdfs:label>
-        <skos:definition xml:lang="en">An age range&apos;s lower and upper bounds.</skos:definition>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://rsna.org/roadmap/03845 -->
-
-    <owl:DatatypeProperty rdf:about="https://rsna.org/roadmap/03845">
-        <rdfs:subPropertyOf rdf:resource="https://rsna.org/roadmap/03844"/>
+    <owl:DatatypeProperty rdf:about="https://rsna.org/roadmap/upperAgeValue">
+        <rdfs:subPropertyOf rdf:resource="https://rsna.org/roadmap/ageRangeValues"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="https://rsna.org/roadmap/03462"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-        <rdfs:label xml:lang="en">lower age value</rdfs:label>
-        <skos:definition xml:lang="en">The lower bound of age range.</skos:definition>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://rsna.org/roadmap/03846 -->
-
-    <owl:DatatypeProperty rdf:about="https://rsna.org/roadmap/03846">
-        <rdfs:subPropertyOf rdf:resource="https://rsna.org/roadmap/03844"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="https://rsna.org/roadmap/03462"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">was :03846</rdfs:comment>
         <rdfs:label xml:lang="en">upper age value</rdfs:label>
         <skos:definition xml:lang="en">The upper bound of an age range.</skos:definition>
     </owl:DatatypeProperty>
     
 
 
-    <!-- https://rsna.org/roadmap/03868 -->
+    <!-- https://rsna.org/roadmap/upperConfidenceLimit -->
 
-    <owl:DatatypeProperty rdf:about="https://rsna.org/roadmap/03868">
-        <rdfs:subPropertyOf rdf:resource="https://rsna.org/roadmap/03843"/>
-        <rdfs:domain rdf:resource="https://rsna.org/roadmap/03871"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
-        <rdfs:label xml:lang="en">non-scalar metric observed value</rdfs:label>
-        <skos:definition xml:lang="en">Specifies the observed value of a non-scalar metric (a graph or matrix) for a model on a specified dataset; that value is a URI that can point to an image, table, or other resource.</skos:definition>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://rsna.org/roadmap/03869 -->
-
-    <owl:DatatypeProperty rdf:about="https://rsna.org/roadmap/03869">
-        <rdfs:subPropertyOf rdf:resource="https://rsna.org/roadmap/03843"/>
-        <rdfs:domain rdf:resource="https://rsna.org/roadmap/03870"/>
+    <owl:DatatypeProperty rdf:about="https://rsna.org/roadmap/upperConfidenceLimit">
+        <rdfs:subPropertyOf rdf:resource="https://rsna.org/roadmap/confidenceIntervalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="https://rsna.org/roadmap/00672"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
-        <rdfs:label xml:lang="en">scalar metric observed value</rdfs:label>
-        <skos:definition xml:lang="en">Specifies the observed value (xsd:decimal) of a scalar metric for a model on a specified dataset.</skos:definition>
+        <rdfs:comment xml:lang="en">was :03797</rdfs:comment>
+        <rdfs:label xml:lang="en">upper confidence limit</rdfs:label>
+        <skos:definition xml:lang="en">The upper confidence limit is the largest value bounding a confidence interval</skos:definition>
+        <skos:exactMatch rdf:resource="http://purl.obolibrary.org/obo/STATO_0000314"/>
     </owl:DatatypeProperty>
     
 
@@ -1133,7 +1147,7 @@ Note that this property is *not* transitive: some guideline items are disjunctio
         <rdfs:subClassOf rdf:resource="https://rsna.org/roadmap/00657"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/03350"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasModelProperty"/>
                 <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/03355"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1151,7 +1165,7 @@ Note that this property is *not* transitive: some guideline items are disjunctio
         <rdfs:subClassOf rdf:resource="https://rsna.org/roadmap/00657"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/03382"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasDatasetProperty"/>
                 <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/03381"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1190,7 +1204,7 @@ Note that this property is *not* transitive: some guideline items are disjunctio
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://rsna.org/roadmap/00003"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/03769"/>
+                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasRole"/>
                         <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/03764"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -1214,7 +1228,7 @@ Note that this property is *not* transitive: some guideline items are disjunctio
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://rsna.org/roadmap/00003"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/03769"/>
+                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasRole"/>
                         <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/03765"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -1242,7 +1256,7 @@ Note that this property is *not* transitive: some guideline items are disjunctio
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://rsna.org/roadmap/00003"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/03769"/>
+                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasRole"/>
                         <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/03766"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -1265,7 +1279,7 @@ Note that this property is *not* transitive: some guideline items are disjunctio
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://rsna.org/roadmap/00007"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/03769"/>
+                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasRole"/>
                         <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/03767"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -1290,7 +1304,7 @@ Note that this property is *not* transitive: some guideline items are disjunctio
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://rsna.org/roadmap/00007"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/03769"/>
+                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasRole"/>
                         <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/03768"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -1314,14 +1328,14 @@ Note that this property is *not* transitive: some guideline items are disjunctio
         <rdfs:subClassOf rdf:resource="https://rsna.org/roadmap/00657"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/00114"/>
-                <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/00002"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasDataset"/>
+                <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/00003"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/00115"/>
-                <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/00003"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasModel"/>
+                <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/00002"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">project</rdfs:label>
@@ -1338,7 +1352,7 @@ Note that this property is *not* transitive: some guideline items are disjunctio
         <rdfs:subClassOf rdf:resource="https://rsna.org/roadmap/03355"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/00629"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasUse"/>
                 <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/00015"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -1775,7 +1789,7 @@ Note that this property is *not* transitive: some guideline items are disjunctio
         <rdfs:subClassOf rdf:resource="https://rsna.org/roadmap/03355"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/00630"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasUser"/>
                 <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/00040"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -2251,7 +2265,7 @@ Note that this property is *not* transitive: some guideline items are disjunctio
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/03820"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasIntegerValue"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
             </owl:Restriction>
@@ -2440,7 +2454,7 @@ Note that this property is *not* transitive: some guideline items are disjunctio
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/03821"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasDateValue"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -4394,13 +4408,13 @@ D - Ethical, Legal, and Maintenance</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://rsna.org/roadmap/00001"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/00116"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasGeneralMetadata"/>
                 <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/00004"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/03831"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasIndex"/>
                 <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/00074"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -4492,7 +4506,7 @@ D - Ethical, Legal, and Maintenance</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://rsna.org/roadmap/00666"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/00130"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasCount"/>
                 <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/00055"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -4521,7 +4535,7 @@ D - Ethical, Legal, and Maintenance</rdfs:comment>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://rsna.org/roadmap/00672"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/01500"/>
+                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/confidenceLevel"/>
                         <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.95</owl:hasValue>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -4545,21 +4559,21 @@ D - Ethical, Legal, and Maintenance</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://rsna.org/roadmap/00666"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/03796"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/lowerConfidenceLimit"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/03797"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/upperConfidenceLimit"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/01500"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/confidenceLevel"/>
                 <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
             </owl:Restriction>
@@ -4690,7 +4704,7 @@ D - Ethical, Legal, and Maintenance</rdfs:comment>
     <owl:Class rdf:about="https://rsna.org/roadmap/01039">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/03648"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/measures"/>
                 <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/04058"/>
             </owl:Restriction>
         </owl:equivalentClass>
@@ -4706,7 +4720,7 @@ D - Ethical, Legal, and Maintenance</rdfs:comment>
     <owl:Class rdf:about="https://rsna.org/roadmap/01040">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/03648"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/measures"/>
                 <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/04055"/>
             </owl:Restriction>
         </owl:equivalentClass>
@@ -4722,7 +4736,7 @@ D - Ethical, Legal, and Maintenance</rdfs:comment>
     <owl:Class rdf:about="https://rsna.org/roadmap/01041">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/03648"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/measures"/>
                 <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/04054"/>
             </owl:Restriction>
         </owl:equivalentClass>
@@ -4738,7 +4752,7 @@ D - Ethical, Legal, and Maintenance</rdfs:comment>
     <owl:Class rdf:about="https://rsna.org/roadmap/01042">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/03648"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/measures"/>
                 <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/00145"/>
             </owl:Restriction>
         </owl:equivalentClass>
@@ -4754,7 +4768,7 @@ D - Ethical, Legal, and Maintenance</rdfs:comment>
     <owl:Class rdf:about="https://rsna.org/roadmap/01043">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/03648"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/measures"/>
                 <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/04064"/>
             </owl:Restriction>
         </owl:equivalentClass>
@@ -4770,7 +4784,7 @@ D - Ethical, Legal, and Maintenance</rdfs:comment>
     <owl:Class rdf:about="https://rsna.org/roadmap/01044">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/03648"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/measures"/>
                 <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/00138"/>
             </owl:Restriction>
         </owl:equivalentClass>
@@ -4786,7 +4800,7 @@ D - Ethical, Legal, and Maintenance</rdfs:comment>
     <owl:Class rdf:about="https://rsna.org/roadmap/01045">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/03648"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/measures"/>
                 <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/04077"/>
             </owl:Restriction>
         </owl:equivalentClass>
@@ -4802,7 +4816,7 @@ D - Ethical, Legal, and Maintenance</rdfs:comment>
     <owl:Class rdf:about="https://rsna.org/roadmap/01046">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/03648"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/measures"/>
                 <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/04060"/>
             </owl:Restriction>
         </owl:equivalentClass>
@@ -4818,7 +4832,7 @@ D - Ethical, Legal, and Maintenance</rdfs:comment>
     <owl:Class rdf:about="https://rsna.org/roadmap/01047">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/03648"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/measures"/>
                 <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/04056"/>
             </owl:Restriction>
         </owl:equivalentClass>
@@ -4834,7 +4848,7 @@ D - Ethical, Legal, and Maintenance</rdfs:comment>
     <owl:Class rdf:about="https://rsna.org/roadmap/01048">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/03648"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/measures"/>
                 <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/00118"/>
             </owl:Restriction>
         </owl:equivalentClass>
@@ -4850,7 +4864,7 @@ D - Ethical, Legal, and Maintenance</rdfs:comment>
     <owl:Class rdf:about="https://rsna.org/roadmap/01049">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/03648"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/measures"/>
                 <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/04061"/>
             </owl:Restriction>
         </owl:equivalentClass>
@@ -4866,7 +4880,7 @@ D - Ethical, Legal, and Maintenance</rdfs:comment>
     <owl:Class rdf:about="https://rsna.org/roadmap/01050">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/03648"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/measures"/>
                 <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/00160"/>
             </owl:Restriction>
         </owl:equivalentClass>
@@ -4882,7 +4896,7 @@ D - Ethical, Legal, and Maintenance</rdfs:comment>
     <owl:Class rdf:about="https://rsna.org/roadmap/01051">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/03648"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/measures"/>
                 <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/04057"/>
             </owl:Restriction>
         </owl:equivalentClass>
@@ -4898,7 +4912,7 @@ D - Ethical, Legal, and Maintenance</rdfs:comment>
     <owl:Class rdf:about="https://rsna.org/roadmap/01052">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/03648"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/measures"/>
                 <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/04075"/>
             </owl:Restriction>
         </owl:equivalentClass>
@@ -4914,7 +4928,7 @@ D - Ethical, Legal, and Maintenance</rdfs:comment>
     <owl:Class rdf:about="https://rsna.org/roadmap/01053">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/03648"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/measures"/>
                 <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/04063"/>
             </owl:Restriction>
         </owl:equivalentClass>
@@ -4930,7 +4944,7 @@ D - Ethical, Legal, and Maintenance</rdfs:comment>
     <owl:Class rdf:about="https://rsna.org/roadmap/01054">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/03648"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/measures"/>
                 <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/04059"/>
             </owl:Restriction>
         </owl:equivalentClass>
@@ -4946,7 +4960,7 @@ D - Ethical, Legal, and Maintenance</rdfs:comment>
     <owl:Class rdf:about="https://rsna.org/roadmap/01055">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/03648"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/measures"/>
                 <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/03504"/>
             </owl:Restriction>
         </owl:equivalentClass>
@@ -4962,7 +4976,7 @@ D - Ethical, Legal, and Maintenance</rdfs:comment>
     <owl:Class rdf:about="https://rsna.org/roadmap/01056">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/03648"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/measures"/>
                 <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/04067"/>
             </owl:Restriction>
         </owl:equivalentClass>
@@ -4978,7 +4992,7 @@ D - Ethical, Legal, and Maintenance</rdfs:comment>
     <owl:Class rdf:about="https://rsna.org/roadmap/01057">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/03648"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/measures"/>
                 <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/04066"/>
             </owl:Restriction>
         </owl:equivalentClass>
@@ -4994,7 +5008,7 @@ D - Ethical, Legal, and Maintenance</rdfs:comment>
     <owl:Class rdf:about="https://rsna.org/roadmap/01058">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/03648"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/measures"/>
                 <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/04065"/>
             </owl:Restriction>
         </owl:equivalentClass>
@@ -5994,7 +6008,7 @@ D - Ethical, Legal, and Maintenance</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://rsna.org/roadmap/03302"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/03648"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/measures"/>
                 <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/04061"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -7261,13 +7275,13 @@ D - Ethical, Legal, and Maintenance</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://rsna.org/roadmap/03389"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/00631"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasValue"/>
                 <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/00059"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/00631"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasValue"/>
                 <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/00122"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -8450,7 +8464,7 @@ D - Ethical, Legal, and Maintenance</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/03848"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasAgeUnit"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onClass rdf:resource="https://rsna.org/roadmap/03467"/>
             </owl:Restriction>
@@ -8471,7 +8485,7 @@ D - Ethical, Legal, and Maintenance</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://rsna.org/roadmap/03565"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/00631"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasValue"/>
                 <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/03428"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -8633,11 +8647,11 @@ D - Ethical, Legal, and Maintenance</rdfs:comment>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://rsna.org/roadmap/03449"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/03848"/>
+                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasAgeUnit"/>
                         <owl:hasValue rdf:resource="https://rsna.org/roadmap/03470"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/03845"/>
+                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/lowerAgeValue"/>
                         <owl:someValuesFrom>
                             <rdfs:Datatype>
                                 <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
@@ -8650,7 +8664,7 @@ D - Ethical, Legal, and Maintenance</rdfs:comment>
                         </owl:someValuesFrom>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/03846"/>
+                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/upperAgeValue"/>
                         <owl:someValuesFrom>
                             <rdfs:Datatype>
                                 <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
@@ -8685,11 +8699,11 @@ D - Ethical, Legal, and Maintenance</rdfs:comment>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://rsna.org/roadmap/03449"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/03848"/>
+                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasAgeUnit"/>
                         <owl:hasValue rdf:resource="https://rsna.org/roadmap/03470"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/03845"/>
+                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/lowerAgeValue"/>
                         <owl:someValuesFrom>
                             <rdfs:Datatype>
                                 <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
@@ -8702,7 +8716,7 @@ D - Ethical, Legal, and Maintenance</rdfs:comment>
                         </owl:someValuesFrom>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/03846"/>
+                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/upperAgeValue"/>
                         <owl:someValuesFrom>
                             <rdfs:Datatype>
                                 <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
@@ -8746,11 +8760,11 @@ D - Ethical, Legal, and Maintenance</rdfs:comment>
                             <owl:Class>
                                 <owl:intersectionOf rdf:parseType="Collection">
                                     <owl:Restriction>
-                                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/03848"/>
+                                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasAgeUnit"/>
                                         <owl:hasValue rdf:resource="https://rsna.org/roadmap/03468"/>
                                     </owl:Restriction>
                                     <owl:Restriction>
-                                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/03845"/>
+                                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/lowerAgeValue"/>
                                         <owl:someValuesFrom>
                                             <rdfs:Datatype>
                                                 <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
@@ -8763,7 +8777,7 @@ D - Ethical, Legal, and Maintenance</rdfs:comment>
                                         </owl:someValuesFrom>
                                     </owl:Restriction>
                                     <owl:Restriction>
-                                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/03846"/>
+                                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/upperAgeValue"/>
                                         <owl:someValuesFrom>
                                             <rdfs:Datatype>
                                                 <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
@@ -8780,11 +8794,11 @@ D - Ethical, Legal, and Maintenance</rdfs:comment>
                             <owl:Class>
                                 <owl:intersectionOf rdf:parseType="Collection">
                                     <owl:Restriction>
-                                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/03848"/>
+                                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasAgeUnit"/>
                                         <owl:hasValue rdf:resource="https://rsna.org/roadmap/03469"/>
                                     </owl:Restriction>
                                     <owl:Restriction>
-                                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/03845"/>
+                                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/lowerAgeValue"/>
                                         <owl:someValuesFrom>
                                             <rdfs:Datatype>
                                                 <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
@@ -8797,7 +8811,7 @@ D - Ethical, Legal, and Maintenance</rdfs:comment>
                                         </owl:someValuesFrom>
                                     </owl:Restriction>
                                     <owl:Restriction>
-                                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/03846"/>
+                                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/upperAgeValue"/>
                                         <owl:someValuesFrom>
                                             <rdfs:Datatype>
                                                 <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
@@ -8814,11 +8828,11 @@ D - Ethical, Legal, and Maintenance</rdfs:comment>
                             <owl:Class>
                                 <owl:intersectionOf rdf:parseType="Collection">
                                     <owl:Restriction>
-                                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/03848"/>
+                                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasAgeUnit"/>
                                         <owl:hasValue rdf:resource="https://rsna.org/roadmap/03470"/>
                                     </owl:Restriction>
                                     <owl:Restriction>
-                                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/03845"/>
+                                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/lowerAgeValue"/>
                                         <owl:someValuesFrom>
                                             <rdfs:Datatype>
                                                 <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
@@ -8831,7 +8845,7 @@ D - Ethical, Legal, and Maintenance</rdfs:comment>
                                         </owl:someValuesFrom>
                                     </owl:Restriction>
                                     <owl:Restriction>
-                                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/03846"/>
+                                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/upperAgeValue"/>
                                         <owl:someValuesFrom>
                                             <rdfs:Datatype>
                                                 <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
@@ -8874,11 +8888,11 @@ D - Ethical, Legal, and Maintenance</rdfs:comment>
                             <owl:Class>
                                 <owl:intersectionOf rdf:parseType="Collection">
                                     <owl:Restriction>
-                                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/03848"/>
+                                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasAgeUnit"/>
                                         <owl:hasValue rdf:resource="https://rsna.org/roadmap/03468"/>
                                     </owl:Restriction>
                                     <owl:Restriction>
-                                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/03845"/>
+                                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/lowerAgeValue"/>
                                         <owl:someValuesFrom>
                                             <rdfs:Datatype>
                                                 <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
@@ -8891,7 +8905,7 @@ D - Ethical, Legal, and Maintenance</rdfs:comment>
                                         </owl:someValuesFrom>
                                     </owl:Restriction>
                                     <owl:Restriction>
-                                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/03846"/>
+                                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/upperAgeValue"/>
                                         <owl:someValuesFrom>
                                             <rdfs:Datatype>
                                                 <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
@@ -8908,11 +8922,11 @@ D - Ethical, Legal, and Maintenance</rdfs:comment>
                             <owl:Class>
                                 <owl:intersectionOf rdf:parseType="Collection">
                                     <owl:Restriction>
-                                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/03848"/>
+                                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasAgeUnit"/>
                                         <owl:hasValue rdf:resource="https://rsna.org/roadmap/03469"/>
                                     </owl:Restriction>
                                     <owl:Restriction>
-                                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/03845"/>
+                                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/lowerAgeValue"/>
                                         <owl:someValuesFrom>
                                             <rdfs:Datatype>
                                                 <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
@@ -8925,7 +8939,7 @@ D - Ethical, Legal, and Maintenance</rdfs:comment>
                                         </owl:someValuesFrom>
                                     </owl:Restriction>
                                     <owl:Restriction>
-                                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/03846"/>
+                                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/upperAgeValue"/>
                                         <owl:someValuesFrom>
                                             <rdfs:Datatype>
                                                 <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
@@ -8942,11 +8956,11 @@ D - Ethical, Legal, and Maintenance</rdfs:comment>
                             <owl:Class>
                                 <owl:intersectionOf rdf:parseType="Collection">
                                     <owl:Restriction>
-                                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/03848"/>
+                                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasAgeUnit"/>
                                         <owl:hasValue rdf:resource="https://rsna.org/roadmap/03470"/>
                                     </owl:Restriction>
                                     <owl:Restriction>
-                                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/03845"/>
+                                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/lowerAgeValue"/>
                                         <owl:someValuesFrom>
                                             <rdfs:Datatype>
                                                 <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
@@ -8959,7 +8973,7 @@ D - Ethical, Legal, and Maintenance</rdfs:comment>
                                         </owl:someValuesFrom>
                                     </owl:Restriction>
                                     <owl:Restriction>
-                                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/03846"/>
+                                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/upperAgeValue"/>
                                         <owl:someValuesFrom>
                                             <rdfs:Datatype>
                                                 <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
@@ -9004,11 +9018,11 @@ D - Ethical, Legal, and Maintenance</rdfs:comment>
                             <owl:Class>
                                 <owl:intersectionOf rdf:parseType="Collection">
                                     <owl:Restriction>
-                                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/03848"/>
+                                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasAgeUnit"/>
                                         <owl:hasValue rdf:resource="https://rsna.org/roadmap/03469"/>
                                     </owl:Restriction>
                                     <owl:Restriction>
-                                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/03845"/>
+                                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/lowerAgeValue"/>
                                         <owl:someValuesFrom>
                                             <rdfs:Datatype>
                                                 <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
@@ -9021,7 +9035,7 @@ D - Ethical, Legal, and Maintenance</rdfs:comment>
                                         </owl:someValuesFrom>
                                     </owl:Restriction>
                                     <owl:Restriction>
-                                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/03846"/>
+                                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/upperAgeValue"/>
                                         <owl:someValuesFrom>
                                             <rdfs:Datatype>
                                                 <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
@@ -9038,11 +9052,11 @@ D - Ethical, Legal, and Maintenance</rdfs:comment>
                             <owl:Class>
                                 <owl:intersectionOf rdf:parseType="Collection">
                                     <owl:Restriction>
-                                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/03848"/>
+                                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasAgeUnit"/>
                                         <owl:hasValue rdf:resource="https://rsna.org/roadmap/03470"/>
                                     </owl:Restriction>
                                     <owl:Restriction>
-                                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/03845"/>
+                                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/lowerAgeValue"/>
                                         <owl:someValuesFrom>
                                             <rdfs:Datatype>
                                                 <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
@@ -9055,7 +9069,7 @@ D - Ethical, Legal, and Maintenance</rdfs:comment>
                                         </owl:someValuesFrom>
                                     </owl:Restriction>
                                     <owl:Restriction>
-                                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/03846"/>
+                                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/upperAgeValue"/>
                                         <owl:someValuesFrom>
                                             <rdfs:Datatype>
                                                 <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
@@ -9095,11 +9109,11 @@ D - Ethical, Legal, and Maintenance</rdfs:comment>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://rsna.org/roadmap/03449"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/03848"/>
+                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasAgeUnit"/>
                         <owl:hasValue rdf:resource="https://rsna.org/roadmap/03470"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/03845"/>
+                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/lowerAgeValue"/>
                         <owl:someValuesFrom>
                             <rdfs:Datatype>
                                 <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
@@ -9112,7 +9126,7 @@ D - Ethical, Legal, and Maintenance</rdfs:comment>
                         </owl:someValuesFrom>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/03846"/>
+                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/upperAgeValue"/>
                         <owl:someValuesFrom>
                             <rdfs:Datatype>
                                 <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
@@ -9148,11 +9162,11 @@ D - Ethical, Legal, and Maintenance</rdfs:comment>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://rsna.org/roadmap/03449"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/03848"/>
+                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasAgeUnit"/>
                         <owl:hasValue rdf:resource="https://rsna.org/roadmap/03470"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/03845"/>
+                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/lowerAgeValue"/>
                         <owl:someValuesFrom>
                             <rdfs:Datatype>
                                 <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
@@ -9165,7 +9179,7 @@ D - Ethical, Legal, and Maintenance</rdfs:comment>
                         </owl:someValuesFrom>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/03846"/>
+                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/upperAgeValue"/>
                         <owl:someValuesFrom>
                             <rdfs:Datatype>
                                 <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
@@ -9200,11 +9214,11 @@ D - Ethical, Legal, and Maintenance</rdfs:comment>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://rsna.org/roadmap/03449"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/03848"/>
+                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasAgeUnit"/>
                         <owl:hasValue rdf:resource="https://rsna.org/roadmap/03470"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/03845"/>
+                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/lowerAgeValue"/>
                         <owl:someValuesFrom>
                             <rdfs:Datatype>
                                 <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
@@ -9217,7 +9231,7 @@ D - Ethical, Legal, and Maintenance</rdfs:comment>
                         </owl:someValuesFrom>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/03846"/>
+                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/upperAgeValue"/>
                         <owl:someValuesFrom>
                             <rdfs:Datatype>
                                 <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
@@ -9253,11 +9267,11 @@ D - Ethical, Legal, and Maintenance</rdfs:comment>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://rsna.org/roadmap/03449"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/03848"/>
+                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasAgeUnit"/>
                         <owl:hasValue rdf:resource="https://rsna.org/roadmap/03470"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/03845"/>
+                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/lowerAgeValue"/>
                         <owl:someValuesFrom>
                             <rdfs:Datatype>
                                 <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
@@ -9294,11 +9308,11 @@ D - Ethical, Legal, and Maintenance</rdfs:comment>
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://rsna.org/roadmap/03449"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/03848"/>
+                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasAgeUnit"/>
                         <owl:hasValue rdf:resource="https://rsna.org/roadmap/03470"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/03845"/>
+                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/lowerAgeValue"/>
                         <owl:someValuesFrom>
                             <rdfs:Datatype>
                                 <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
@@ -9335,14 +9349,14 @@ D - Ethical, Legal, and Maintenance</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://rsna.org/roadmap/03423"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/03845"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/lowerAgeValue"/>
                 <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/03846"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/upperAgeValue"/>
                 <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
             </owl:Restriction>
@@ -9361,7 +9375,7 @@ D - Ethical, Legal, and Maintenance</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://rsna.org/roadmap/03423"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/03822"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasDecimalValue"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
             </owl:Restriction>
@@ -9405,7 +9419,7 @@ D - Ethical, Legal, and Maintenance</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://rsna.org/roadmap/00666"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/00130"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasCount"/>
                 <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/00055"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -9517,7 +9531,7 @@ D - Ethical, Legal, and Maintenance</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://rsna.org/roadmap/03355"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/03862"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasData"/>
                 <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/03389"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -9667,7 +9681,7 @@ D - Ethical, Legal, and Maintenance</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://rsna.org/roadmap/03355"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/03862"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasData"/>
                 <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/03389"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -9958,13 +9972,13 @@ D - Ethical, Legal, and Maintenance</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://rsna.org/roadmap/03391"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/00631"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasValue"/>
                 <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/00120"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/00631"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasValue"/>
                 <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/00121"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -10543,7 +10557,7 @@ D - Ethical, Legal, and Maintenance</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://rsna.org/roadmap/03637"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/03645"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasScalarMetric"/>
                 <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/04048"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -10592,13 +10606,13 @@ D - Ethical, Legal, and Maintenance</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://rsna.org/roadmap/03637"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/03645"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasScalarMetric"/>
                 <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/03321"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/03645"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasScalarMetric"/>
                 <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/03537"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -10946,91 +10960,91 @@ D - Ethical, Legal, and Maintenance</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://rsna.org/roadmap/03640"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/03645"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasScalarMetric"/>
                 <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/03307"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/03645"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasScalarMetric"/>
                 <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/03320"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/03645"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasScalarMetric"/>
                 <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/03324"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/03645"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasScalarMetric"/>
                 <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/03325"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/03645"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasScalarMetric"/>
                 <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/03326"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/03645"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasScalarMetric"/>
                 <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/03339"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/03645"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasScalarMetric"/>
                 <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/03340"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/03645"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasScalarMetric"/>
                 <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/03342"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/03645"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasScalarMetric"/>
                 <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/03356"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/03645"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasScalarMetric"/>
                 <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/03547"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/03645"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasScalarMetric"/>
                 <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/03707"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/03645"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasScalarMetric"/>
                 <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/04073"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/03645"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasScalarMetric"/>
                 <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/04074"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/03645"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasScalarMetric"/>
                 <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/04080"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/03645"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasScalarMetric"/>
                 <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/04081"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -11340,13 +11354,13 @@ D - Ethical, Legal, and Maintenance</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://rsna.org/roadmap/03302"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/03648"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/measures"/>
                 <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/04061"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/03648"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/measures"/>
                 <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/04062"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -11594,19 +11608,19 @@ D - Ethical, Legal, and Maintenance</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://rsna.org/roadmap/03641"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/03645"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasScalarMetric"/>
                 <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/03653"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/03645"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasScalarMetric"/>
                 <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/03654"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/03645"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasScalarMetric"/>
                 <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/03655"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -13235,20 +13249,20 @@ D - Ethical, Legal, and Maintenance</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://rsna.org/roadmap/03641"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/00157"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasScalarMetric"/>
+                <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/03314"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasXAxis"/>
                 <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/03322"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/00158"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasYAxis"/>
                 <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/03339"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/03645"/>
-                <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/03314"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="es">análisis de la curva característica operativa del receptor</rdfs:label>
@@ -13269,7 +13283,7 @@ D - Ethical, Legal, and Maintenance</rdfs:comment>
     <owl:Class rdf:about="https://rsna.org/roadmap/03638">
         <owl:equivalentClass>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/03648"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/measures"/>
                 <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/04062"/>
             </owl:Restriction>
         </owl:equivalentClass>
@@ -13354,20 +13368,20 @@ D - Ethical, Legal, and Maintenance</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://rsna.org/roadmap/03641"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/00157"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasScalarMetric"/>
+                <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/03508"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasXAxis"/>
                 <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/03339"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/00158"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasYAxis"/>
                 <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/03324"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/03645"/>
-                <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/03508"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <dcterms:source rdf:resource="https://doi.org/10.1007/s11547-024-01886-9"/>
@@ -14029,7 +14043,7 @@ D - Ethical, Legal, and Maintenance</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://rsna.org/roadmap/03637"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/03645"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasScalarMetric"/>
                 <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/03222"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -14067,13 +14081,13 @@ D - Ethical, Legal, and Maintenance</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://rsna.org/roadmap/01055"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/03645"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasScalarMetric"/>
                 <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/03223"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/03645"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasScalarMetric"/>
                 <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/03572"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -14385,7 +14399,7 @@ D - Ethical, Legal, and Maintenance</rdfs:comment>
         <rdfs:subClassOf rdf:resource="https://rsna.org/roadmap/03641"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/03645"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasScalarMetric"/>
                 <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/00156"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -14648,7 +14662,7 @@ D - Ethical, Legal, and Maintenance</rdfs:comment>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/03819"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasURI"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -14893,7 +14907,7 @@ When the function is the square of the difference and the variables are binary (
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://rsna.org/roadmap/00665"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/03769"/>
+                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasRole"/>
                         <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/03764"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -14913,7 +14927,7 @@ When the function is the square of the difference and the variables are binary (
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://rsna.org/roadmap/00665"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/03769"/>
+                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasRole"/>
                         <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/03765"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -14934,7 +14948,7 @@ When the function is the square of the difference and the variables are binary (
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://rsna.org/roadmap/00665"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/03769"/>
+                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasRole"/>
                         <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/03766"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -14955,7 +14969,7 @@ When the function is the square of the difference and the variables are binary (
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://rsna.org/roadmap/03773"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/03769"/>
+                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasRole"/>
                         <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/03767"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -14976,7 +14990,7 @@ When the function is the square of the difference and the variables are binary (
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://rsna.org/roadmap/03773"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/03769"/>
+                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasRole"/>
                         <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/03768"/>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -15019,7 +15033,7 @@ When the function is the square of the difference and the variables are binary (
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://rsna.org/roadmap/00672"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/01500"/>
+                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/confidenceLevel"/>
                         <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.99</owl:hasValue>
                     </owl:Restriction>
                 </owl:intersectionOf>
@@ -15174,7 +15188,7 @@ When the function is the square of the difference and the variables are binary (
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/03833"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/evaluatesPerformanceOn"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onClass rdf:resource="https://rsna.org/roadmap/03832"/>
             </owl:Restriction>
@@ -15293,11 +15307,11 @@ When the function is the square of the difference and the variables are binary (
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://rsna.org/roadmap/03449"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/03848"/>
+                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasAgeUnit"/>
                         <owl:hasValue rdf:resource="https://rsna.org/roadmap/03470"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/03845"/>
+                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/lowerAgeValue"/>
                         <owl:someValuesFrom>
                             <rdfs:Datatype>
                                 <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
@@ -15310,7 +15324,7 @@ When the function is the square of the difference and the variables are binary (
                         </owl:someValuesFrom>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/03846"/>
+                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/upperAgeValue"/>
                         <owl:someValuesFrom>
                             <rdfs:Datatype>
                                 <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
@@ -15342,11 +15356,11 @@ When the function is the square of the difference and the variables are binary (
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://rsna.org/roadmap/03449"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/03848"/>
+                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasAgeUnit"/>
                         <owl:hasValue rdf:resource="https://rsna.org/roadmap/03470"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/03845"/>
+                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/lowerAgeValue"/>
                         <owl:someValuesFrom>
                             <rdfs:Datatype>
                                 <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
@@ -15359,7 +15373,7 @@ When the function is the square of the difference and the variables are binary (
                         </owl:someValuesFrom>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/03846"/>
+                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/upperAgeValue"/>
                         <owl:someValuesFrom>
                             <rdfs:Datatype>
                                 <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
@@ -15391,11 +15405,11 @@ When the function is the square of the difference and the variables are binary (
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://rsna.org/roadmap/03449"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/03848"/>
+                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasAgeUnit"/>
                         <owl:hasValue rdf:resource="https://rsna.org/roadmap/03470"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/03845"/>
+                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/lowerAgeValue"/>
                         <owl:someValuesFrom>
                             <rdfs:Datatype>
                                 <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
@@ -15427,11 +15441,11 @@ When the function is the square of the difference and the variables are binary (
                 <owl:intersectionOf rdf:parseType="Collection">
                     <rdf:Description rdf:about="https://rsna.org/roadmap/03449"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/03848"/>
+                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasAgeUnit"/>
                         <owl:hasValue rdf:resource="https://rsna.org/roadmap/03470"/>
                     </owl:Restriction>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/03845"/>
+                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/lowerAgeValue"/>
                         <owl:someValuesFrom>
                             <rdfs:Datatype>
                                 <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
@@ -15461,21 +15475,21 @@ When the function is the square of the difference and the variables are binary (
         <rdfs:subClassOf rdf:resource="https://rsna.org/roadmap/03808"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/03709"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasMetric"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onClass rdf:resource="https://rsna.org/roadmap/03302"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/03849"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasConfidenceInterval"/>
                 <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
                 <owl:onClass rdf:resource="https://rsna.org/roadmap/00672"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/03869"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/scalarMetricObservedValue"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
             </owl:Restriction>
@@ -15498,14 +15512,14 @@ When the function is the square of the difference and the variables are binary (
         <rdfs:subClassOf rdf:resource="https://rsna.org/roadmap/03808"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/03709"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasMetric"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onClass rdf:resource="https://rsna.org/roadmap/03778"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/03868"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/nonScalarMetricObservedValue"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
             </owl:Restriction>
@@ -15544,11 +15558,11 @@ When the function is the square of the difference and the variables are binary (
                             <owl:Class>
                                 <owl:intersectionOf rdf:parseType="Collection">
                                     <owl:Restriction>
-                                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/03848"/>
+                                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasAgeUnit"/>
                                         <owl:hasValue rdf:resource="https://rsna.org/roadmap/03469"/>
                                     </owl:Restriction>
                                     <owl:Restriction>
-                                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/03845"/>
+                                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/lowerAgeValue"/>
                                         <owl:someValuesFrom>
                                             <rdfs:Datatype>
                                                 <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
@@ -15561,7 +15575,7 @@ When the function is the square of the difference and the variables are binary (
                                         </owl:someValuesFrom>
                                     </owl:Restriction>
                                     <owl:Restriction>
-                                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/03846"/>
+                                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/upperAgeValue"/>
                                         <owl:someValuesFrom>
                                             <rdfs:Datatype>
                                                 <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
@@ -15578,11 +15592,11 @@ When the function is the square of the difference and the variables are binary (
                             <owl:Class>
                                 <owl:intersectionOf rdf:parseType="Collection">
                                     <owl:Restriction>
-                                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/03848"/>
+                                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasAgeUnit"/>
                                         <owl:hasValue rdf:resource="https://rsna.org/roadmap/03470"/>
                                     </owl:Restriction>
                                     <owl:Restriction>
-                                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/03845"/>
+                                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/lowerAgeValue"/>
                                         <owl:someValuesFrom>
                                             <rdfs:Datatype>
                                                 <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
@@ -15595,7 +15609,7 @@ When the function is the square of the difference and the variables are binary (
                                         </owl:someValuesFrom>
                                     </owl:Restriction>
                                     <owl:Restriction>
-                                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/03846"/>
+                                        <owl:onProperty rdf:resource="https://rsna.org/roadmap/upperAgeValue"/>
                                         <owl:someValuesFrom>
                                             <rdfs:Datatype>
                                                 <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
@@ -15738,7 +15752,7 @@ When the function is the square of the difference and the variables are binary (
         <rdfs:subClassOf rdf:resource="https://rsna.org/roadmap/03602"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/03821"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasDateValue"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
             </owl:Restriction>
@@ -15789,7 +15803,7 @@ When the function is the square of the difference and the variables are binary (
         <rdfs:subClassOf rdf:resource="https://rsna.org/roadmap/03602"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/03819"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasURI"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
             </owl:Restriction>
@@ -15817,7 +15831,7 @@ When the function is the square of the difference and the variables are binary (
         <rdfs:subClassOf rdf:resource="https://rsna.org/roadmap/03889"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/03821"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasDateValue"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
             </owl:Restriction>
@@ -15834,7 +15848,7 @@ When the function is the square of the difference and the variables are binary (
         <rdfs:subClassOf rdf:resource="https://rsna.org/roadmap/03889"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/03821"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasDateValue"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
             </owl:Restriction>
@@ -15851,7 +15865,7 @@ When the function is the square of the difference and the variables are binary (
         <rdfs:subClassOf rdf:resource="https://rsna.org/roadmap/03889"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/03821"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasDateValue"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
             </owl:Restriction>
@@ -16046,7 +16060,7 @@ When the function is the square of the difference and the variables are binary (
         <rdfs:subClassOf rdf:resource="https://rsna.org/roadmap/03624"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/03819"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasURI"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -17063,28 +17077,28 @@ When the function is the square of the difference and the variables are binary (
         <rdfs:subClassOf rdf:resource="https://rsna.org/roadmap/03548"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/01128"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasOutcomeCount"/>
                 <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
                 <owl:onClass rdf:resource="https://rsna.org/roadmap/04091"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/01128"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasOutcomeCount"/>
                 <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
                 <owl:onClass rdf:resource="https://rsna.org/roadmap/04092"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/01128"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasOutcomeCount"/>
                 <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
                 <owl:onClass rdf:resource="https://rsna.org/roadmap/04093"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/01128"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasOutcomeCount"/>
                 <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
                 <owl:onClass rdf:resource="https://rsna.org/roadmap/04094"/>
             </owl:Restriction>
@@ -17446,7 +17460,7 @@ rEDR = (number of positive cases not detected by human alone) / (number of posit
         <rdfs:subClassOf rdf:resource="https://rsna.org/roadmap/00659"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/03820"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/hasIntegerValue"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -17712,7 +17726,7 @@ PREV = P / n</skos:definition>
         <rdfs:subClassOf rdf:resource="https://rsna.org/roadmap/03302"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://rsna.org/roadmap/03648"/>
+                <owl:onProperty rdf:resource="https://rsna.org/roadmap/measures"/>
                 <owl:someValuesFrom rdf:resource="https://rsna.org/roadmap/04058"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -26576,5 +26590,5 @@ Tier 4: no sharing</rdfs:comment>
 
 
 
-<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.29) https://github.com/owlcs/owlapi -->
 
